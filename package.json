@@ -4,8 +4,10 @@
   "description": "An auction site where you can bid on different items",
   "main": "index.js",
   "scripts": {
-    "build": "npm install sass",
-    "format": "prettier"
+    "build": "sass src/scss:dist/css",
+    "start": "sass --watch src/scss:dist/css & live-server",
+    "format": "prettier .",
+    "lint": "eslint ."
   },
   "keywords": [],
   "author": "",
@@ -13,9 +15,11 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "latest": "^0.2.0",
+    "live-server": "^1.2.2",
     "sass": "^1.71.1"
   },
   "devDependencies": {
+    "lint": "^0.8.19",
     "prettier": "^3.2.5"
   }
 }
