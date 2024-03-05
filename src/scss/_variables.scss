@@ -1,5 +1,10 @@
 // Sass Variables
 // --bs-border-width: 1px;
-$primary: (#001F3F);
-    
+// $primary: (#57738f);
+
 $font-family-base: press-start-2p, sans-serif;
+
+body * {
+  font-family: "Press Start 2P", sans-serif;
+  font-weight: normal;
+}

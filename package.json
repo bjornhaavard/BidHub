@@ -8,7 +8,8 @@
     "start": "sass --watch src/scss:dist/css & live-server",
     "format": "prettier -w src/**/*.js",
     "lint": "eslint src/**/*.js",
-    "lint-fix": "eslint src/**/*.js --cache --fix"
+    "lint-fix": "eslint src/**/*.js --cache --fix",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": "bjornhaavard",
@@ -21,7 +22,9 @@
   },
   "devDependencies": {
     "eslint": "^8.57.0",
+    "husky": "^9.0.11",
     "lint": "^0.8.19",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.2.5"
   },
   "repository": {
@@ -31,5 +34,18 @@
   "bugs": {
     "url": "https://github.com/bjornhaavard/BidHub/issues"
   },
-  "homepage": "https://github.com/bjornhaavard/BidHub#readme"
+  "homepage": "https://github.com/bjornhaavard/BidHub#readme",
+
+  "lint-staged": {
+    "*.js": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.html": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "prettier --write"
+    ]
+  }
 }

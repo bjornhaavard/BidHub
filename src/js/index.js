@@ -16,11 +16,11 @@ function router() {
       // Handle the contact path
       console.log("Contact us at example@example.com");
       break;
-    default:
-      // Handle any other paths
-      console.log("Page not found");
-      break;
   }
 }
 // Calling the router function
 router();
+
+console.log("Intentional Formatting Error");
+
+console.log("Intentional Error");
