@@ -6,11 +6,12 @@
   "scripts": {
     "build": "sass src/scss:dist/css",
     "start": "sass --watch src/scss:dist/css & live-server",
-    "format": "prettier .",
-    "lint": "eslint ."
+    "format": "prettier -w src/**/*.js",
+    "lint": "eslint src/**/*.js",
+    "lint-fix": "eslint src/**/*.js --cache --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "bjornhaavard",
   "license": "ISC",
   "dependencies": {
     "bootstrap": "^5.3.3",
@@ -19,7 +20,16 @@
     "sass": "^1.71.1"
   },
   "devDependencies": {
+    "eslint": "^8.57.0",
     "lint": "^0.8.19",
     "prettier": "^3.2.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjornhaavard/BidHub.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bjornhaavard/BidHub/issues"
+  },
+  "homepage": "https://github.com/bjornhaavard/BidHub#readme"
 }
