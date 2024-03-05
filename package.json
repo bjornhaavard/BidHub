@@ -1,6 +1,6 @@
 {
   "name": "bidhub",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An auction site where you can bid on different items",
   "main": "index.js",
   "scripts": {
@@ -35,7 +35,6 @@
     "url": "https://github.com/bjornhaavard/BidHub/issues"
   },
   "homepage": "https://github.com/bjornhaavard/BidHub#readme",
-
   "lint-staged": {
     "*.js": [
       "prettier --write",
