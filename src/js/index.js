@@ -20,7 +20,3 @@ function router() {
 }
 // Calling the router function
 router();
-
-console.log("Intentional Formatting Error");
-
-console.log("Intentional Error");
