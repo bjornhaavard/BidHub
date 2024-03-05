@@ -1,7 +1,10 @@
 // Define the router function
-function router(path) {
+function router() {
+    const path = window.location.pathname;
+
   switch (path) {
-    case '/':
+    case "/":
+    case "/index.html":
       // Handle the root path
       console.log('Welcome to the homepage');
       break;
@@ -19,9 +22,6 @@ function router(path) {
       break;
   }
 }
+// Calling the router function
+router();
 
-// Example usage
-router('/');
-router('/about');
-router('/contact');
-router('/unknown');
