@@ -35,17 +35,6 @@
     "url": "https://github.com/bjornhaavard/BidHub/issues"
   },
   "homepage": "https://github.com/bjornhaavard/BidHub#readme",
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "eslint --fix",
-      "eslint --cache --fix"
-    ],
-    "*.html": [
-      "prettier --write"
-    ],
-    "*.scss": [
-      "prettier --write"
-    ]
+ 
   }
 }
