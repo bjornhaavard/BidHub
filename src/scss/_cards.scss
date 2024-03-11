@@ -1,11 +1,24 @@
+@import "colours";
+
 .card-body {
   background-color: #001f3f;
   border-radius: 1rem;
 }
 
 .card-body * {
-  color: #fffff2;
+  color: $white;
   a:hover {
-    color: #b8c9a8;
+    color: $background-color;
   }
+}
+
+#login-here {
+color: $white;
+  &:hover {
+ color: $background-color;
+ }
+}
+
+.form-floating > .form-label {
+  color: #1b2229; /* Replace with your preferred color */
 }
