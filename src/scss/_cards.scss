@@ -1,24 +1,24 @@
-@import "colours";
+@use "colors";
 
 .card-body {
-  background-color: #001f3f;
+  background-color: colors.$card-bg-color;
   border-radius: 1rem;
 }
 
 .card-body * {
-  color: $white;
+  color: colors.$white;
   a:hover {
-    color: $background-color;
+    color: colors.$background-color;
   }
 }
 
 #login-here {
-color: $white;
+  color: colors.$white;
   &:hover {
- color: $background-color;
- }
+    color: colors.$background-color;
+  }
 }
 
 .form-floating > .form-label {
-  color: #1b2229; /* Replace with your preferred color */
+  color: colors.$card-bg-color;
 }
