@@ -4,9 +4,27 @@
   background-color: colors.$card-bg-color;
 }
 
+
 .nav-link {
   color: colors.$white;
   &:hover {
     color: colors.$background-color;
+    border-radius: 3px;
   }
+}
+
+.nav-link.active {
+  background-color: colors.$background-color;
+  border-radius: 3px;
+}
+
+.navbar-brand {
+  color: colors.$white;
+  &:hover {
+    color: colors.$white;
+  }
+}
+
+.navbar-toggler-icon {
+  color: colors.$white;
 }
