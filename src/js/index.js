@@ -1,4 +1,7 @@
 // Define the router function
+
+import { API_HOST_URL, API_LISTINGS } from "./api/constants.js";
+
 function router() {
   const path = window.location.pathname;
 
@@ -8,9 +11,10 @@ function router() {
       // Handle the root path
       console.log("Welcome to the homepage");
       break;
-    case "/about":
-      // Handle the about path
-      console.log("This is the about page");
+    case "/profile/":
+    case "/profile/index.html":
+      // Handle the profile path
+      console.log("This is the profile page");
       break;
     case "/contact":
       // Handle the contact path
@@ -20,3 +24,5 @@ function router() {
 }
 // Calling the router function
 router();
+
+console.log("api url: ", `${API_HOST_URL}/${API_LISTINGS} `);
