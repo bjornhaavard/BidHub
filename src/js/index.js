@@ -1,6 +1,5 @@
 // Define the router function
-
-import { API_HOST_URL, API_LISTINGS } from "./api/constants.js";
+import { setRegisterFormListener } from "./handlers/register.js";
 
 function router() {
   const path = window.location.pathname;
@@ -16,6 +15,10 @@ function router() {
       // Handle the profile path
       console.log("This is the profile page");
       break;
+    case "../auth/register/":
+    case "../auth/register/index.html":
+    setRegisterFormListener();
+      break;
     case "/contact":
       // Handle the contact path
       console.log("Contact us at example@example.com");
@@ -25,4 +28,3 @@ function router() {
 // Calling the router function
 router();
 
-console.log("api url: ", `${API_HOST_URL}/${API_LISTINGS} `);
