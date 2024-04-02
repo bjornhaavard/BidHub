@@ -20,7 +20,7 @@ function router() {
 
       case "/auth/login/":
       case "/auth/login/index.html":
-      // setLoginFormListener();
+      setLoginFormListener();
       console.log("This is the login page");
         break;
 
