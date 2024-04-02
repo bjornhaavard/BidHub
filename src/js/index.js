@@ -10,15 +10,19 @@ function router() {
       // Handle the root path
       console.log("Welcome to the homepage");
       break;
+
     case "/profile/":
     case "/profile/index.html":
       // Handle the profile path
       console.log("This is the profile page");
       break;
-    case "../auth/register/":
-    case "../auth/register/index.html":
+
+    case "/auth/register/":
+    case "/auth/register/index.html":
     setRegisterFormListener();
+    console.log("This is the register page");
       break;
+
     case "/contact":
       // Handle the contact path
       console.log("Contact us at example@example.com");

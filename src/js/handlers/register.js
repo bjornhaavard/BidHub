@@ -15,11 +15,11 @@ export function setRegisterFormListener() {
 
     try {
       await register(profile);
-      displayMessage("#message", 'Registration successful. Please <a href="/">login</a>', "success");
+      displayMessage("#message", 'Registration successful. Please <a href="../auth/login">login</a>', "success");
       form.reset();
     } catch (error) {
       console.error(error);
-      displayMessage("#message", error.message, "warning");
+      displayMessage("#message", error.message, "danger");
     }
   });
 }
