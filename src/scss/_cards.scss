@@ -5,8 +5,9 @@
   border-radius: 1rem;
 }
 
-.card-body * {
+.card-body  {
   color: colors.$white;
+  
   a:hover {
     color: colors.$background-color;
   }
@@ -21,4 +22,11 @@
 
 .form-floating > .form-label {
   color: colors.$card-bg-color;
+}
+
+.font-white {
+  color: colors.$white;
+}
+a  {
+  color: colors.$white;
 }
