@@ -1,15 +1,14 @@
 import { API_HOST_URL } from "../constants.js";
 
-const action = "/auth/register";
+const action = "/auth/login";
 const method = "post";
 
-export async function register(profile) {
-  const registerURL = API_HOST_URL + action;
-
-  const data = {};
+export async function login(profile) {
+  const loginURL = API_HOST_URL + action;
 
   const body = JSON.stringify(profile);
-  const response = await fetch(registerURL, {
+
+  const response = await fetch(loginURL, {
     headers: {
       "Content-Type": "application/json",
     },

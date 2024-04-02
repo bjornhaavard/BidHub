@@ -1,5 +1,6 @@
 // Define the router function
 import { setRegisterFormListener } from "./handlers/register.js";
+import { setLoginFormListener } from "./handlers/login.js";
 
 function router() {
   const path = window.location.pathname;
@@ -16,6 +17,12 @@ function router() {
       // Handle the profile path
       console.log("This is the profile page");
       break;
+
+      case "/auth/login/":
+      case "/auth/login/index.html":
+      // setLoginFormListener();
+      console.log("This is the login page");
+        break;
 
     case "/auth/register/":
     case "/auth/register/index.html":
