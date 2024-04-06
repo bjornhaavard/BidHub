@@ -10,10 +10,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=press-start-2p" />
     <link rel="stylesheet" href="/dist/css/index.css" />
   </head>
-  <body class="d-flex flex-column h-100">
+  <body>
     <header>
-      <nav class="navbar sticky-top navbar-expand-lg" aria-label="Feed">
-        <div class="container-fluid">
+      <nav class="navbar fixed-top navbar-expand-lg p-3" aria-label="Feed">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
           <a class="navbar-brand" href="/">BidHub</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,19 +26,78 @@
               <li class="nav-item">
                 <a class="nav-link active" aria-current="items" href="/">Items</a>
               </li>
+
               <!-- <li class="nav-item">
                 <a class="nav-link" href="/profile/">Profile</a>
               </li> -->
             </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" id="searchInput" type="search" placeholder="Search" aria-label="Search" />
+              <button id="searchButton" class="btn btn-primary btn-outline-light" type="submit">Search</button>
+            </form>
           </div>
         </div>
       </nav>
     </header>
-    <main class="flex-shrink-0 d-flex justify-content-center">
-      <form class="d-flex  mt-4" role="search">
-        <input class="form-control" id="searchInput" type="search" placeholder="Search" aria-label="Search" />
-        <button id="searchButton" class="btn btn-outline-light btn-primary" type="submit">Search</button>
-      </form>
+    <main>
+      <!-- <div class="mt-5 p-4 justify-content-center">
+        <h2>BidHub</h2>
+      </div> -->
+      <section class="vh-100 align-items-center d-flex">
+        <div class="container mt-5">
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <h1>Welcome!</h1>
+              <p>This is a auction site for various items that you need in your life. All in glorious 8 bit pixels</p>
+            </div>
+            <div class="col-md-6">
+              <img
+                src="https://cdn.gencraft.com/prod/user/4c9c1f4e-aa8e-4d0a-ac9a-2038a0468c36/3381efaf-7998-4220-9c96-e3280a5585b5/image/image0_0.jpg?Expires=1712490282&Signature=QuyjcJo2rjZ2yT5-xKs0e-fgyI1e4hR9ZUrnmp46cvGFHaOsdrmItfnfjk-UaFnZF2zcX9uSX1zrPNGfMG4jdFKObXYY4YbFajgWPLdQAmroqDxm~FUeBOCCm27r9Hz7AoMR9jpYTCbeFjvxh3APFterQJa5xxUXrAsFTFusKRhckwtcCnGtZJ-lZV~HFw~Ic0jmwstpfMEDp9~YVejj-p414O~8~rJhaTTFAIHEL0xC5nn-v2S~pTVOwAjeVnlKBMtQwBBUnVjXGpzp3KKOlUpzHxotX3~If~yOEDcal1Ug4MP4PCKTz5PQt~kG8oTwId4P0PSez35DeD9T8dCJ6w__&Key-Pair-Id=K3RDDB1TZ8BHT8"
+                alt="Welcome Image"
+                class="img-fluid"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="m-4">
+        <div class="container mt-4">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            <!-- Example card -->
+            <div class="col">
+              <div class="card">
+                <img src="https://images.pexels.com/photos/9406607/pexels-photo-9406607.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Auction Item</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-outline-light btn-primary">Bid Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://images.pexels.com/photos/9406607/pexels-photo-9406607.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Auction Item</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-outline-light btn-primary">Bid Now</a>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="https://images.pexels.com/photos/9406607/pexels-photo-9406607.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title">Auction Item</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-outline-light btn-primary">Bid Now</a>
+                </div>
+              </div>
+            </div>
+            <!-- Repeat the card structure for multiple auction items -->
+          </div>
+        </div>
+      </section>
     </main>
     <footer class="footer mt-auto py-3 py-3 my-4 border-top">
       <div class="container d-flex justify-content-center">

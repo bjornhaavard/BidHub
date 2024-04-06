@@ -2,12 +2,12 @@
 
 .card-body {
   background-color: colors.$card-bg-color;
-  border-radius: 1rem;
+  // border-radius: 1rem;
 }
 
-.card-body  {
+.card-body {
   color: colors.$white;
-  
+
   a:hover {
     color: colors.$background-color;
   }
@@ -27,6 +27,6 @@
 .font-white {
   color: colors.$white;
 }
-a  {
+a {
   color: colors.$white;
 }
