@@ -1,4 +1,5 @@
 // Define the router function
+import { getListings } from "./api/listings/getListings.js";
 import { setRegisterFormListener } from "./handlers/register.js";
 import { setLoginFormListener } from "./handlers/login.js";
 
@@ -9,7 +10,8 @@ function router() {
     case "/":
     case "/index.html":
       // Handle the root path
-      console.log("Welcome to the homepage");
+      getListings();
+
       break;
 
     case "/profile/":
@@ -18,16 +20,16 @@ function router() {
       console.log("This is the profile page");
       break;
 
-      case "/auth/login/":
-      case "/auth/login/index.html":
+    case "/auth/login/":
+    case "/auth/login/index.html":
       setLoginFormListener();
       console.log("This is the login page");
-        break;
+      break;
 
     case "/auth/register/":
     case "/auth/register/index.html":
-    setRegisterFormListener();
-    console.log("This is the register page");
+      setRegisterFormListener();
+      console.log("This is the register page");
       break;
 
     case "/contact":
@@ -38,4 +40,3 @@ function router() {
 }
 // Calling the router function
 router();
-
