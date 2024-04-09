@@ -1,7 +1,8 @@
 // Define the router function
-import { getListings } from "./api/listings/getListings.js";
+// import { getListings } from "./api/listings/getListings.js";
 import { setRegisterFormListener } from "./handlers/register.js";
 import { setLoginFormListener } from "./handlers/login.js";
+import { displayListings } from "./handlers/displayListing.js";
 
 function router() {
   const path = window.location.pathname;
@@ -10,7 +11,8 @@ function router() {
     case "/":
     case "/index.html":
       // Handle the root path
-      getListings();
+
+      displayListings();
 
       break;
 
