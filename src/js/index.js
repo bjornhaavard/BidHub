@@ -11,6 +11,7 @@ function router() {
     case "/index.html":
       // Handle the root path
       getListings();
+  
 
       break;
 

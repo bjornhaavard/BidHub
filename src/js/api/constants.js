@@ -3,3 +3,5 @@ export const API_BASE = "/api/v1";
 export const API_LISTINGS = "/auction/listings";
 export const API_LOGIN = "/auction/auth/login";
 export const API_REGISTER = "/auction/auth/register";
+
+console.log(API_HOST_URL + API_BASE + API_LISTINGS);
