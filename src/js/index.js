@@ -17,7 +17,7 @@ function router() {
     case "/profile/":
     case "/profile/index.html":
       // Handle the profile path
-      console.log("This is the profile page");
+      console.log("https://v2.api.noroff.dev/auction/profiles");
       break;
 
     case "/auth/login/":

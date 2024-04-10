@@ -1,10 +1,10 @@
-import { API_HOST_URL } from "../constants.js";
+import { API_BASE, API_HOST_URL } from "../constants.js";
 
-const action = "/auth/login";
+const action = "/auction/auth/login";
 const method = "post";
 
 export async function login(profile) {
-  const loginURL = API_HOST_URL + action;
+  const loginURL = API_HOST_URL + API_BASE + action;
 
   const body = JSON.stringify(profile);
     console.log(profile);
