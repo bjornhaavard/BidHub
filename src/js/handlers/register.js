@@ -11,22 +11,22 @@ export function setRegisterFormListener() {
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
 
-    if(profile.avatar === "") {
-        delete profile.avatar
-      }
-      else {
-    profile.avatar = {
-        url: profile.avatar,
-        alt: `${profile.name}'s avatar`
-      }
-    }
+    // if(profile.avatar === "") {
+    //     delete profile.avatar
+    //   }
+    //   else {
+    // profile.avatar = {
+    //     url: profile.avatar,
+    //     alt: `${profile.name}'s avatar`
+    //   }
+    // }
     
 
     console.log(profile);
 
     try {
       await register(profile);
-      displayMessage("#message", 'Registration successful. Please <a href="../auth/login">login</a>', "dark");
+      displayMessage("#message", 'Registration successful. Please <a href="/auth/login">login</a>', "dark");
       form.reset();
     } catch (error) {
       console.error(error);

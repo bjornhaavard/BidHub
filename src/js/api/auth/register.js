@@ -1,10 +1,10 @@
-import { API_HOST_URL } from "../constants.js";
+import { API_BASE, API_HOST_URL } from "../constants.js";
 
-const action = "/auth/register";
+const action = "/auction/auth/register";
 const method = "post";
 
 export async function register(profile) {
-  const registerURL = API_HOST_URL + action;
+  const registerURL = API_HOST_URL + API_BASE + action;
 
   const data = {};
 
