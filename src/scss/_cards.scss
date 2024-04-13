@@ -2,7 +2,6 @@
 
 .card-body {
   background-color: colors.$card-bg-color;
-  // border-radius: 1rem;
 }
 
 .card-body {
@@ -29,4 +28,15 @@
 }
 a {
   color: colors.$white;
+}
+
+.card {
+  display: flex; /* Enable flexbox for card */
+  flex-direction: column; /* Arrange content vertically */
+  min-height: 300px; /* Set minimum card height (adjust as needed) */
+}
+
+.card-img-top {
+  flex: 1; /* Allow image to fill remaining space */
+  object-fit: cover; /* Crop image to fit container */
 }
