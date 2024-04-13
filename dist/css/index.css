@@ -11874,6 +11874,17 @@ a {
   color: #fffff2;
 }
 
+.card {
+  display: flex; /* Enable flexbox for card */
+  flex-direction: column; /* Arrange content vertically */
+  min-height: 300px; /* Set minimum card height (adjust as needed) */
+}
+
+.card-img-top {
+  flex: 1; /* Allow image to fill remaining space */
+  object-fit: cover; /* Crop image to fit container */
+}
+
 .navbar {
   background-color: #001f3f;
 }
