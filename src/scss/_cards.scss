@@ -1,11 +1,42 @@
+@use "colors";
+
 .card-body {
-  background-color: #001f3f;
-  border-radius: 1rem;
+  background-color: colors.$card-bg-color;
 }
 
-.card-body * {
-  color: #fffff2;
+.card-body {
+  color: colors.$white;
+
   a:hover {
-    color: #b8c9a8;
+    color: colors.$background-color;
   }
+}
+
+#login-here {
+  color: colors.$white;
+  &:hover {
+    color: colors.$background-color;
+  }
+}
+
+.form-floating > .form-label {
+  color: colors.$card-bg-color;
+}
+
+.font-white {
+  color: colors.$white;
+}
+a {
+  color: colors.$white;
+}
+
+.card {
+  display: flex; /* Enable flexbox for card */
+  flex-direction: column; /* Arrange content vertically */
+  min-height: 300px; /* Set minimum card height (adjust as needed) */
+}
+
+.card-img-top {
+  flex: 1; /* Allow image to fill remaining space */
+  object-fit: cover; /* Crop image to fit container */
 }

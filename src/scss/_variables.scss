@@ -1,7 +1,33 @@
-// Sass Variables
+@use "colors";
+
+// color Variables
+
+$primary: colors.$card-bg-color;
+
+$body-bg: colors.$background-color;
+
+// font variables
 
 $font-family-base: "press start 2p", sans-serif;
 
 $font-size-base: 0.9rem;
 
-$body-bg: #b8c9a8;
+$link-color-rgb: colors.$white;
+
+// nav variables
+
+$navbar-brand-color: colors.$white;
+
+// $navbar-active-color: colors.$card-bg-color;
+
+$border-color: colors.$card-bg-color;
+
+$nav-pills-link-active-bg: colors.$background-color;
+
+$bs-light: colors.$background-color;
+
+$navbar-color: colors.$white;
+
+$navbar-brand-color: colors.$white;
+
+$navbar-toggler-color: colors.$white;
