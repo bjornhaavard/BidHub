@@ -12,7 +12,6 @@ export function renderListings(listings, parent) {
 
     const divCard = document.createElement("div", "col-lg-4");
     divCard.classList.add("card");
-    divCard.style.minHeight = "300px";
     divContainer.append(divCard);
 
     const imgContainer = document.createElement("div");
@@ -25,7 +24,7 @@ export function renderListings(listings, parent) {
     divCard.append(img);
 
     const divCardBody = document.createElement("div");
-    divCardBody.classList.add("card-body");
+    divCardBody.classList.add("card-body", "card-bg");
     divCard.append(divCardBody);
 
     const heading = document.createElement("h5");
