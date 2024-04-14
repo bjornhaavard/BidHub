@@ -1,8 +1,8 @@
 // Define the router function
 
-import { setRegisterFormListener } from "../js/handlers/register.js";
-import { setLoginFormListener } from "../../src/js/handlers/login.js";
-import { displayListings } from "../js/handlers/displayListing.js";
+import { setRegisterFormListener } from "./handlers/register.js";
+import { displayListings } from "./handlers/displayListing.js";
+import { setLoginFormListener } from "./handlers/login.js";
 
 function router() {
   const path = window.location.pathname;
@@ -15,15 +15,15 @@ function router() {
 
       break;
 
-    case "./profile/":
-    case "./profile/index.html":
+    case "../profile/":
+    case "../profile/index.html":
       // Handle the profile path
 
       break;
 
-    case "./auth/login/":
-    case "./auth/login/index.html":
-      setLoginFormListener();
+    case "../auth/login/":
+    case "../auth/login/index.html":
+      setLoginFormListener;
 
       break;
 
