@@ -8,7 +8,7 @@ function router() {
   const path = window.location.pathname;
 
   switch (path) {
-    case "/":
+    case "":
     case "/index.html":
       // Handle the root path
       displayListings();
