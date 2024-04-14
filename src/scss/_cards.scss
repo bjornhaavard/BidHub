@@ -6,6 +6,7 @@
 
 .card-body {
   color: colors.$white;
+  height: 130px;
 
   a:hover {
     color: colors.$background-color;
@@ -37,6 +38,7 @@ a {
 }
 
 .card-img-top {
-  flex: 1; /* Allow image to fill remaining space */
+  height: 350px;
+  // flex: 1; /* Allow image to fill remaining space */
   object-fit: cover; /* Crop image to fit container */
 }

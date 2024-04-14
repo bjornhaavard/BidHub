@@ -11850,6 +11850,7 @@ textarea.form-control-lg {
 
 .card-body {
   color: #fffff2;
+  height: 130px;
 }
 .card-body a:hover {
   color: #b8c9a8;
@@ -11881,7 +11882,7 @@ a {
 }
 
 .card-img-top {
-  flex: 1; /* Allow image to fill remaining space */
+  height: 350px;
   object-fit: cover; /* Crop image to fit container */
 }
 
