@@ -25,7 +25,7 @@ function router() {
 
     case "../auth/login/":
     case "../auth/login/index.html":
-      setLoginFormListener;
+      setLoginFormListener();
 
       break;
 
