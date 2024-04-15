@@ -6,8 +6,6 @@ const method = "post";
 export async function register(profile) {
   const registerURL = API_HOST_URL + API_BASE + action;
 
-  const data = {};
-
   const body = JSON.stringify(profile);
   const response = await fetch(registerURL, {
     headers: {

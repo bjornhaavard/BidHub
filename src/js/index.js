@@ -1,8 +1,7 @@
 // Define the router function
-// import { getListings } from "./api/listings/getListings.js";
-import { setRegisterFormListener } from "./handlers/register.js";
-import { setLoginFormListener } from "./handlers/login.js";
+import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
+import { displayProfileData } from "./components/profile/profilePage.js";
 
 function router() {
   const path = window.location.pathname;
@@ -10,26 +9,33 @@ function router() {
   switch (path) {
     case "/":
     case "/index.html":
+    case "BidHub/":
+    case "BidHub/index.html":
       // Handle the root path
+      displayProfileData();
       displayListings();
 
       break;
 
-    case "/profile/":
-    case "/profile/index.html":
+    case "/auth/profile/":
+    case "/auth/profile/index.html":
+    case "/BidHub/auth/profile/index.html":
+    case "/BidHub/auth/profile/":
       // Handle the profile path
-      console.log("https://v2.api.noroff.dev/auction/profiles");
+      displayProfileData();
+      handlers.logOut();
+
       break;
 
     case "/auth/login/":
     case "/auth/login/index.html":
-      setLoginFormListener();
+      handlers.setLoginFormListener();
       console.log("This is the login page");
       break;
 
     case "/auth/register/":
     case "/auth/register/index.html":
-      setRegisterFormListener();
+      handlers.setRegisterFormListener();
       console.log("This is the register page");
       break;
 
