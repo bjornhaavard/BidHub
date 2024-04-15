@@ -10,6 +10,8 @@ function router() {
   switch (path) {
     case "/":
     case "/index.html":
+    case "/BidHub/":
+    case "/BidHub/index.html":
       // Handle the root path
       displayListings();
 
