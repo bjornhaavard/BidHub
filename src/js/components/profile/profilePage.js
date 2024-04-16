@@ -5,8 +5,6 @@ import { getProfile } from "../../api/listings/profile.js";
 import { displayMessage } from "../shared/displayMessage.js";
 
 export async function displayProfileData(profileData) {
-  // Replace the placeholder image with the user's avatar
-
   const fetchedProfile = await getProfile();
   const loggedInUsername = getName(fetchedProfile);
 
