@@ -12,7 +12,7 @@ export async function displayProfileData(profileData) {
     const placeHolder = document.querySelector("#profile-spinner");
     try {
       profileData = fetchedProfile;
-      if (profileData) {
+      if (profileData && placeHolder) {
         placeHolder.style.display = "none";
       }
       const { name, avatar, email, credits } = profileData;
@@ -33,7 +33,8 @@ export async function displayProfileData(profileData) {
       const creditsElement = document.getElementById("profile-credits");
       creditsElement.textContent = `Credits: ${credits}`;
     } catch (error) {
-      displayMessage("#error-message", "Something went wrong", "danger");
+      console.log(error);
+      displayMessage("#error-message", error, "danger");
       return;
     }
   }

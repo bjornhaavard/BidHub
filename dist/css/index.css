@@ -11872,6 +11872,8 @@ textarea.form-control-lg {
 
 a {
   color: #fffff2;
+  background-color: #001f3f;
+  padding: 3px;
 }
 
 .card {
@@ -11920,6 +11922,10 @@ a {
 
 .navbar-toggler-icon {
   color: #fffff2;
+}
+
+.navbar-toggler {
+  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=index.css.map */

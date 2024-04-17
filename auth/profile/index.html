@@ -12,7 +12,7 @@
   </head>
   <body class="h-100">
     <header>
-      <nav class="navbar navbar-expand-lg" aria-label="Feed">
+      <nav class="navbar navbar-expand-lg p-3" aria-label="Feed">
         <div class="container-fluid">
           <a class="navbar-brand" href="/">BidHub</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,7 +21,7 @@
           <div class="collapse navbar-collapse" id="navbars">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav nav-pills">
               <li class="nav-item">
-                <a class="nav-link" href="../auth/login/">Login</a>
+                <a class="nav-link" href="/auth/login/">Login</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="feed" href="/">Items</a>
@@ -40,8 +40,12 @@
           <div id="profile-spinner"></div>
           <div id="error-message"></div>
           <div class="card text-center">
-            <img id="profile-img" src="" class="card-img-top mx-auto" style="object-fit: cover; object-position: center" alt="Profile Picture" />
+            <img src="/src/images/welcome-image.png" class="card-img-top mx-auto" alt="Profile Picture" />
             <div class="card-body">
+              <div>
+                <img id="profile-img" src="" alt="Generic placeholder image" class="img-fluid mt-4 mb-2" style="width: 150px; z-index: 1" />
+              </div>
+              <button type="button" class="btn profile-btn btn-outline-light m-3" data-mdb-ripple-color="light">Edit profile</button>
               <h5 class="card-title" id="profile-name"></h5>
               <p class="card-text" id="profile-email"></p>
               <p class="card-text" id="profile-credits"></p>

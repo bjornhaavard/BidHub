@@ -28,6 +28,8 @@
 }
 a {
   color: colors.$white;
+  background-color: colors.$card-bg-color;
+  padding: 3px;
 }
 
 .card {
@@ -48,5 +50,4 @@ a {
   object-fit: cover; /* Crop image to fit container */
   min-height: 250px;
   max-height: 251px;
-
 }

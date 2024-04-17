@@ -4,10 +4,10 @@ import { getListings } from "../api/listings/getListings.js";
 
 export async function displayListings() {
   try {
-    // const placeholder = document.querySelector("#spinner");
+    const placeholder = document.querySelector("#spinner");
 
     if (renderListings) {
-      //   placeholder.style.display = "none";
+      placeholder.style.display = "none";
     }
     const listings = await getListings();
 
