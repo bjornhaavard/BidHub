@@ -30,13 +30,13 @@ function router() {
     case "/auth/login/":
     case "/auth/login/index.html":
       handlers.setLoginFormListener();
-      console.log("This is the login page");
+
       break;
 
     case "/auth/register/":
     case "/auth/register/index.html":
       handlers.setRegisterFormListener();
-      console.log("This is the register page");
+
       break;
 
     case "/contact":
