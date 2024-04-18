@@ -14,7 +14,6 @@ export function renderListings(listings, parent) {
       media,
       seller: { name },
     } = listing;
-    console.log(listing);
 
     const divContainer = document.createElement("div");
     divContainer.classList.add("col", "col-md-6", "col-lg-4");
@@ -61,6 +60,7 @@ export function renderListings(listings, parent) {
     const divSeller = document.createElement("p");
     divSeller.classList.add("card-text");
     divSeller.textContent = `${name}`;
+    divSeller.style.textDecoration = "underline";
     divCardBody.append(divSeller);
 
     const heading = document.createElement("h5");
@@ -75,7 +75,7 @@ export function renderListings(listings, parent) {
     divCardBody.append(ends);
 
     const link = document.createElement("a");
-    link.href = `/details.html?id=${id}`;
+    link.href = `/auctions/index.html?id=${id}`;
     link.classList.add("btn", "btn-primary", "btn-outline-light");
     link.textContent = "View";
 
