@@ -12,7 +12,7 @@ function router() {
     case "BidHub/":
     case "BidHub/index.html":
       // Handle the root path
-      displayProfileData();
+
       displayListings();
 
       break;

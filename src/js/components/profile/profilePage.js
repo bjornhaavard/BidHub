@@ -12,7 +12,7 @@ export async function displayProfileData(profileData) {
     const placeHolder = document.querySelector("#profile-spinner");
     try {
       profileData = fetchedProfile;
-      if (profileData && placeHolder && document.getElementById("profile-img")) {
+      if (profileData && placeHolder) {
         placeHolder.style.display = "none";
       }
       const { name, avatar, email, credits } = profileData;
