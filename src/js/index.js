@@ -1,6 +1,7 @@
 // Define the router function
 import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
+
 import { displayProfileData } from "./components/profile/profilePage.js";
 
 function router() {
@@ -39,9 +40,10 @@ function router() {
 
       break;
 
-    case "/contact":
-      // Handle the contact path
-      console.log("Contact us at example@example.com");
+    case "/auctions/":
+    case "/auctions/index.html":
+      handlers.displaySingleListing();
+
       break;
   }
 }

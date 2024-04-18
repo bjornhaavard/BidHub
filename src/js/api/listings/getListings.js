@@ -16,13 +16,12 @@ export async function getDetails(id) {
     throw new Error(displayMessage("#listing-container", "Get requires a listingID", "danger"));
   }
 
-  const getPostUrl = `${API_LISTINGS}${id}?_author=true&_comments=true&_reactions=true`;
-  console.log(getPostUrl);
-  const response = await fetchWithToken(getPostUrl);
+  const getSingleListingUrl = `${API_HOST_URL}${API_BASE}${API_LISTINGS}/${id}?&_seller=true&_bids=true&_active=true`;
+
+  const response = await fetchWithToken(getSingleListingUrl);
+  console.log(response);
   if (response.ok) {
     return await response.json();
   }
   throw new Error(response.statusText);
 }
-
-getDetails();

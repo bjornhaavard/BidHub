@@ -1,4 +1,5 @@
 export * from "./logOut.js";
-export * from "./displayListing.js";
 export * from "./login.js";
+export * from "./displayListing.js";
+export * from "./displayListingDetail.js";
 export * from "./register.js";
