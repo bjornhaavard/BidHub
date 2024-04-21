@@ -17,11 +17,12 @@ export function getTimeRemaining(endTime) {
 }
 
 export function formatCountdown(timeObject) {
+  //
   const { days, hours, minutes, seconds } = timeObject;
   const daysString = days > 0 ? `${days}d ` : "";
   const hoursString = hours.toString().padStart(2, "0") + ":";
   const minutesString = minutes.toString().padStart(2, "0") + ":";
   const secondsString = seconds.toString().padStart(2, "0");
-  console.log(daysString, hoursString, minutesString, secondsString);
-  return `<span class="math-inline">${daysString}</span>${hoursString}<span class="math-inline">${minutesString}</span>${secondsString}`;
+
+  return `${daysString}${hoursString}${minutesString}${secondsString}`;
 }
