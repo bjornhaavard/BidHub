@@ -41,6 +41,7 @@
     <main>
       <section class="vh-100 align-items-center d-flex">
         <div id="message"></div>
+
         <div class="container mt-5">
           <div class="row align-items-center">
             <div class="col-md-6">
@@ -54,6 +55,26 @@
         </div>
       </section>
       <section class="m-4">
+        <div class="container py-5" id="custom-cards">
+          <h3 class="pb-2 border-bottom">Listings</h3>
+          <div class="row align-items-center card-body p-1">
+            <div class="col-md-6">
+              <a href="/auctions/newListing/index.html">
+                <button type="button" id="new-listing-button" style="display: none" class="btn btn-primary btn-outline-light">New Listing</button>
+              </a>
+            </div>
+            <div class="col-md-6 d-flex justify-content-end">
+              <li class="nav-item dropdown list-unstyled">
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-label="dropdown sort menu" aria-expanded="false">Sort/Filter</a>
+                <ul class="dropdown-menu" id="sortDropdown">
+                  <li><a class="dropdown-item" aria-label="sort by newest" href="#" data-sort="created" data-sort-order="desc">Newest</a></li>
+                  <li><a class="dropdown-item" aria-label="sort for oldest" href="#" data-sort="created" data-sort-order="asc">Oldest</a></li>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </div>
+
         <div class="container mt-4">
           <div id="error-message"></div>
           <div class="d-flex justify-content-center">
