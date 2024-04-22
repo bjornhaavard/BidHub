@@ -1,7 +1,7 @@
 // Define the router function
 import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
-
+import { searchListingsHandler } from "./handlers/searchListings.js";
 import { displayProfileData } from "./components/profile/profilePage.js";
 
 function router() {
@@ -15,6 +15,7 @@ function router() {
       // Handle the root path
 
       displayListings();
+      searchListingsHandler();
 
       break;
 

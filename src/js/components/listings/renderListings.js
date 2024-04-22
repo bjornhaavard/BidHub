@@ -19,26 +19,6 @@ export function renderListings(listings, parent) {
     divContainer.classList.add("col", "col-md-6", "col-lg-4");
     listingContainer.append(divContainer);
 
-    // const countdownElement = document.createElement("span");
-    // countdownElement.classList.add("countdown");
-
-    // const endTime = listing.endsAt;
-    // const timeRemaining = getTimeRemaining(endTime);
-    // countdownElement.textContent = formatCountdown(timeRemaining);
-
-    // // Update the countdown every second
-    // const intervalId = setInterval(() => {
-    //   const newTimeRemaining = getTimeRemaining(endTime);
-    //   countdownElement.textContent = formatCountdown(newTimeRemaining);
-
-    //   // Clear interval if listing has ended
-    //   if (newTimeRemaining.days === 0 && newTimeRemaining.hours === 0 && newTimeRemaining.minutes === 0 && newTimeRemaining.seconds === 0) {
-    //     clearInterval(intervalId);
-    //   }
-    // }, 1000);
-
-    // Add the countdown element to the listing container
-
     const divCard = document.createElement("div", "col-lg-4");
     divCard.classList.add("card");
     divContainer.append(divCard);
