@@ -1,4 +1,5 @@
 import { defaultAvatarImage } from "../../api/constants.js";
+// import { uploadProfilePicture } from "../../api/helpers/editProfileButton.js";
 import { getName } from "../../api/helpers/getName.js";
 import { getProfile } from "../../api/listings/profile.js";
 
@@ -32,6 +33,8 @@ export async function displayProfileData(profileData) {
       // Display the user's credits
       const creditsElement = document.getElementById("profile-credits");
       creditsElement.textContent = `Credits: ${credits}`;
+
+      //   uploadProfilePicture();
     } catch (error) {
       console.log(error);
       displayMessage("#error-message", error, "danger");
