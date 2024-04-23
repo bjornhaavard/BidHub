@@ -23,7 +23,7 @@ export async function searchListingsHandler() {
       displayMessage("#filter-message", `Showing  ${listings.length} listings from search:  <span style="font-style: italic; text-decoration: underline;">${searchInput.value}</span>`, "success");
     } catch (error) {
       console.log(error);
-      displayMessage("#posts-container", `Something went wrong: ${error}`, "danger");
+      displayMessage("#listings-container", `Something went wrong: ${error}`, "danger");
     }
   });
 }
