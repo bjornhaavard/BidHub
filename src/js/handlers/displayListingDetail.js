@@ -151,7 +151,7 @@ export async function displaySingleListing(container = "#listing-container") {
     bidderPara.textContent = `Bidder: ${highestBidderName}`;
     detailsCol.append(bidderPara);
   } else {
-    // Handle the case where there are no bids (optional)
+    // Handle the case where there are no bids
     const noBidsPara = document.createElement("p");
     noBidsPara.textContent = "No bids yet.";
     detailsCol.append(noBidsPara);

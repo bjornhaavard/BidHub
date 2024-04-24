@@ -1,4 +1,5 @@
 // Define the router function
+import { renderAdminButtons } from "./components/listings/renderAdminButtons.js";
 import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
 import { searchListingsHandler } from "./handlers/searchListings.js";
@@ -13,7 +14,7 @@ function router() {
     case "BidHub/":
     case "BidHub/index.html":
       // Handle the root path
-
+      renderAdminButtons();
       displayListings();
       searchListingsHandler();
 
