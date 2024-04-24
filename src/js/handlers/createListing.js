@@ -1,4 +1,4 @@
-import { createListing } from "../listings/";
+import { createListing } from "../api/listings/create.js";
 
 import { displayMessage } from "../components/shared/displayMessage.js";
 

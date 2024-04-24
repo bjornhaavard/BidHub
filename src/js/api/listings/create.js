@@ -1,7 +1,6 @@
 import { API_CREATE_LISTING } from "../constants.js";
 import { fetchWithToken } from "../fetchWithToken.js";
 
-// const action = "/posts";
 const method = "post";
 
 export async function createListing(listData) {
@@ -11,7 +10,7 @@ export async function createListing(listData) {
     method,
     body: JSON.stringify(listData),
   });
-
+  console.log(response);
   const result = await response.json();
 
   if (response.ok) {
@@ -20,3 +19,4 @@ export async function createListing(listData) {
 
   throw new Error(result.errors[0].message);
 }
+createListing();
