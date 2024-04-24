@@ -14,7 +14,7 @@ export function renderListings(listings, parent) {
       media,
       seller: { name },
     } = listing;
-    console.log(listing + "/da2473c1-80df-4d9b-944d-13fd8a6ec260");
+
     const divContainer = document.createElement("div");
     divContainer.classList.add("col", "col-md-6", "col-lg-4");
     listingContainer.append(divContainer);

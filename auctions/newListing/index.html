@@ -52,42 +52,45 @@
                 <div class="card-body p-5 text-center">
                   <div class="mb-md-5 mt-md-4">
                     <h2 class="fw-bold mb-2 text-uppercase">New Listing</h2>
-                    <form  id="createListing">
+                    <form  id="registrationForm">
                         <div id="message"></div>
-                        <form class="p-4 p-md-5 border rounded-3 bg-body-tertiary" id="createPost">
-                          <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="title" id="post-title" placeholder="Title" maxlength="20" required title="max 20 characters" />
-                            <label for="title">Title</label>
-                          </div>
-      
-                          <div class="form-floating mb-4">
-                            <textarea type="text" class="form-control" name="body" id="new-post-text" minlength="5" required title="minimum 5 characters" rows="6"> </textarea>
-                            <label for="body">Body</label>
-                          </div>
-      
-                          <div class="form-floating mb-4">
-                            <input type="text" class="form-control" name="tags" id="new-post-media" placeholder="tags" />
-                            <label for="tags">Tags</label>
-                          </div>
-      
-                          <div class="form-floating mb-4">
-                            <input type="url" class="form-control" name="media" id="new-post-media" placeholder="media" />
-                            <label for="url">Media</label>
-                          </div>
-      
-                          <button class="w-100 btn btn-lg btn-primary btn-outline-light">Submit Post</button>
-                        </form>
+                       <div class="form-floating form-white mb-4 mt-4">
+                          
+                          <input type="text" class="form-control form-control-lg" name="title" id="post-title" placeholder="Title" maxlength="20" required title="max 20 characters" required />
+                          <label for="title" class="form-label">Title</label>
+                        
+                       </div>
+  
+                       <div class="form-floating  mb-4">
+                        <textarea type="text" class="form-control" name="body" id="new-listing-text" minlength="5" required title="minimum 5 characters" rows="5"> </textarea>
+                        <label for="body" class="form-label">Body</label>
+                       </div>
+                   
+
+                        <div class="form-floating mb-4">
+                            <input type="datetime-local" class="form-control" name="endsAt" id="new-listing-date" placeholder="price" required />
+                            <label for="end-date" class="form-label">End date</label>
+                        </div>
+
+                      <div class="form-floating mb-4">
+                            <input type="url" class="form-control" name="media" id="new-post-media" placeholder="media, must be a valid url" />
+                            <label for="url" class="form-label">Media</label>
+                      </div>
+    
+  
+                        <div>
+                        <button
+                          class="btn btn-outline-light btn-lg px-5"
+                          type="submit"
+                          >
+                          Submit
+                          </button>
+                        </div>
+                      </form>
                       <div>
                       <hr class="my-4" />
-                      <small>By clicking Sign up, you agree to the terms of use.</small>
-                      <p class="text-center mt-3 mb-0">
-                          <hr class="my-4" />
-                        Already have an account?
-                        <a href="../../auth/login/" class="fw-bold">
-                          <u id="login-here">Login here</u>
-                        </a>
-                      </p>
-                    </div>
+                     
+                    </form>
                 </div>
               </div>
             </div>
