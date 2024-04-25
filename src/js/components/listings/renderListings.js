@@ -60,7 +60,7 @@ export function renderListings(listings) {
 
     divCardBody.append(link);
 
-    const adminButtons = renderAdminButtons(loggedInUsername, name);
+    const adminButtons = renderAdminButtons(loggedInUsername);
     if (adminButtons) {
       divCardBody.append(adminButtons);
     }
