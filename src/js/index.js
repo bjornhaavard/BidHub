@@ -1,5 +1,5 @@
 // Define the router function
-import { renderAdminButtons } from "./components/listings/renderAdminButtons.js";
+// import { renderAdminButtons } from "./components/listings/renderAdminButtons.js";
 import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
 import { searchListingsHandler } from "./handlers/searchListings.js";
@@ -14,7 +14,7 @@ function router() {
     case "BidHub/":
     case "BidHub/index.html":
       // Handle the root path
-      renderAdminButtons();
+
       displayListings();
       searchListingsHandler();
 
@@ -25,6 +25,7 @@ function router() {
     case "/BidHub/auth/profile/index.html":
     case "/BidHub/auth/profile/":
       // Handle the profile path
+
       displayProfileData();
       handlers.logOut();
 
@@ -47,6 +48,10 @@ function router() {
       handlers.displaySingleListing();
 
       break;
+
+    case "/auctions/newListing/":
+    case "/auctions/newListing/index.html":
+      handlers.createListingFormListener();
   }
 }
 // Calling the router function

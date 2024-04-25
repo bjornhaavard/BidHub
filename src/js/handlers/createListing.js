@@ -1,9 +1,8 @@
 import { createListing } from "../api/listings/create.js";
-
 import { displayMessage } from "../components/shared/displayMessage.js";
 
 export function createListingFormListener() {
-  const form = document.querySelector("#createListing");
+  const form = document.querySelector("#createListingForm");
 
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -12,13 +11,13 @@ export function createListingFormListener() {
     const formData = new FormData(form);
     const listing = Object.fromEntries(formData.entries());
 
-    listing.tags = listing.tags.split(",").map((item) => item.trim());
+    // listing.tags = listing.tags.split(",").map((item) => item.trim());
 
-    // console.log(post);
+    console.log(listing);
 
     try {
       await createListing(listing);
-      displayMessage("#message", 'Post successful. Please go to <a href="/feed/">Feed</a>', "success");
+      displayMessage("#message", 'added listing successful. Please go to <a href="../">Items</a>', "success");
       form.reset();
     } catch (error) {
       console.error(error);

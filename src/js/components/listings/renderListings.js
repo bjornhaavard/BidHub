@@ -1,9 +1,9 @@
-// import { getTimeRemaining, formatCountdown } from "../../api/helpers/timeRemain.js";
+import { getName } from "../../api/helpers/getName.js";
 import { parseDate } from "../../api/helpers/parse.js";
+import { renderAdminButtons } from "./renderAdminButtons.js";
 
-export function renderListings(listings, parent) {
-  const container = document.querySelector(parent);
-  container.innerHTML = "";
+export function renderListings(listings) {
+  const loggedInUsername = getName();
 
   listings.map(function (listing) {
     const listingContainer = document.querySelector("#listings-container");
@@ -22,7 +22,6 @@ export function renderListings(listings, parent) {
     const divCard = document.createElement("div", "col-lg-4");
     divCard.classList.add("card");
     divContainer.append(divCard);
-    // divContainer.append(countdownElement);
 
     const imgContainer = document.createElement("div");
     imgContainer.classList.add("card-img-container");
@@ -60,5 +59,10 @@ export function renderListings(listings, parent) {
     link.textContent = "View";
 
     divCardBody.append(link);
+
+    const adminButtons = renderAdminButtons(loggedInUsername, name);
+    if (adminButtons) {
+      divCardBody.append(adminButtons);
+    }
   });
 }

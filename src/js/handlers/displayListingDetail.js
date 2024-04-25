@@ -3,9 +3,7 @@ import { getParamFromQueryString } from "../api/helpers/getParamFromQueryString.
 import { formatCountdown, getTimeRemaining } from "../api/helpers/timeRemain.js";
 import { displayMessage } from "../components/shared/displayMessage.js";
 // import { renderAdminButtons } from "../components/posts/renderAdminButtons.js";
-// import { getPostComments } from "../helpers/makeComments.js";
 
-// import { defaultAvatarImage } from "../api/constants.js";
 export async function displaySingleListing(container = "#listing-container") {
   const parentElement = document.querySelector(container);
   const placeHolder = document.querySelector("#spinner");
