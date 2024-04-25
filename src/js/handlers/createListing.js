@@ -11,6 +11,8 @@ export function createListingFormListener() {
     const formData = new FormData(form);
     const listing = Object.fromEntries(formData.entries());
 
+    listing.media = formData.get("media") ? listing.media.split(",").map((item) => item.trim()) : [];
+
     try {
       await createListing(listing);
       displayMessage("#message", 'added listing successful. Please go to <a href="../">Items</a>', "success");
