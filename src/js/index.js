@@ -4,7 +4,7 @@ import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
 import { searchListingsHandler } from "./handlers/searchListings.js";
 import { displayProfileData } from "./components/profile/profilePage.js";
-import { hidelinks } from "./api/helpers/hideProfileLink.js";
+import { hidelinks, hideLogin } from "./api/helpers/hideLink.js";
 
 function router() {
   const path = window.location.pathname;
@@ -19,6 +19,7 @@ function router() {
       displayListings();
       searchListingsHandler();
       hidelinks();
+      hideLogin();
 
       break;
 
@@ -27,7 +28,7 @@ function router() {
     case "/BidHub/auth/profile/index.html":
     case "/BidHub/auth/profile/":
       // Handle the profile path
-
+      hideLogin();
       displayProfileData();
       handlers.logOut();
 
@@ -50,7 +51,7 @@ function router() {
     case "/auctions/index.html":
       handlers.displaySingleListing();
       hidelinks();
-
+      hideLogin();
       break;
 
     case "/auctions/newListing/":
