@@ -1,12 +1,12 @@
 @use "colors";
 
-// color Variables
+// color Variables //
 
 $primary: colors.$card-bg-color;
 
 $body-bg: colors.$background-color;
 
-// font variables
+// font variables //
 
 $font-family-base: "press start 2p", sans-serif;
 
@@ -14,7 +14,7 @@ $font-size-base: 0.9rem;
 
 $link-color-rgb: colors.$white;
 
-// nav variables
+// nav variables //
 
 $navbar-brand-color: colors.$white;
 
@@ -22,7 +22,7 @@ $navbar-brand-color: colors.$white;
 
 $border-color: colors.$card-bg-color;
 
-$nav-pills-link-active-bg: colors.$background-color;
+$nav-pills-link-active-bg: colors.$hover-bg-color;
 
 $bs-light: colors.$background-color;
 

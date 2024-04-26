@@ -1,4 +1,5 @@
 import { defaultAvatarImage } from "../../api/constants.js";
+import { renderAdminButtons } from "../listings/renderAdminButtons.js";
 // import { uploadProfilePicture } from "../../api/helpers/editProfileButton.js";
 import { getName } from "../../api/helpers/getName.js";
 import { getProfile } from "../../api/listings/profile.js";
@@ -8,6 +9,7 @@ import { displayMessage } from "../shared/displayMessage.js";
 export async function displayProfileData(profileData) {
   const fetchedProfile = await getProfile();
   const loggedInUsername = getName(fetchedProfile);
+  const cardFooter = document.querySelector("#profile-footer");
 
   if (loggedInUsername) {
     const placeHolder = document.querySelector("#profile-spinner");
@@ -35,6 +37,11 @@ export async function displayProfileData(profileData) {
       creditsElement.textContent = `Credits: ${credits}`;
 
       //   uploadProfilePicture();
+
+      const adminButtons = renderAdminButtons(loggedInUsername);
+      if (adminButtons) {
+        cardFooter.append(adminButtons);
+      }
     } catch (error) {
       console.log(error);
       displayMessage("#error-message", error, "danger");

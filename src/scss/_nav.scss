@@ -12,7 +12,8 @@
   }
 }
 
-.nav-link.active {
+.nav-link.active,
+.nav-link.show {
   background-color: colors.$hover-bg-color;
   border-radius: 3px;
 }
