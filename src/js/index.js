@@ -4,6 +4,7 @@ import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
 import { searchListingsHandler } from "./handlers/searchListings.js";
 import { displayProfileData } from "./components/profile/profilePage.js";
+import { hidelinks } from "./api/helpers/hideProfileLink.js";
 
 function router() {
   const path = window.location.pathname;
@@ -17,6 +18,7 @@ function router() {
 
       displayListings();
       searchListingsHandler();
+      hidelinks();
 
       break;
 
@@ -34,6 +36,7 @@ function router() {
     case "/auth/login/":
     case "/auth/login/index.html":
       handlers.setLoginFormListener();
+      hidelinks();
 
       break;
 
@@ -46,6 +49,7 @@ function router() {
     case "/auctions/":
     case "/auctions/index.html":
       handlers.displaySingleListing();
+      hidelinks();
 
       break;
 
