@@ -5,7 +5,7 @@ export function headers() {
   const token = load("token");
 
   if (!token) {
-    throw new Error(displayMessage("#profile-error", 'Not logged in, please go to <a href="/auth/login/">Login page</a>', "danger"));
+    displayMessage("#profile-error", 'Not logged in, please go to <a href="/auth/login/">Login page</a>', "danger");
   }
 
   return {

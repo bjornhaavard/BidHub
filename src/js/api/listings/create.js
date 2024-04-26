@@ -1,11 +1,10 @@
 import { API_CREATE_LISTING } from "../constants.js";
 import { fetchWithToken } from "../fetchWithToken.js";
 
-const action = "?_tag=tacos";
 const method = "post";
 
 export async function createListing(listData) {
-  const createListingURL = API_CREATE_LISTING + action;
+  const createListingURL = API_CREATE_LISTING;
 
   const response = await fetchWithToken(createListingURL, {
     method,
