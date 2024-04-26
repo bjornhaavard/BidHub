@@ -1,5 +1,5 @@
 import { defaultAvatarImage } from "../../api/constants.js";
-import { renderAdminButtons } from "../listings/renderAdminButtons.js";
+import { renderProfileAdminButtons } from "../listings/renderAdminButtons.js";
 // import { uploadProfilePicture } from "../../api/helpers/editProfileButton.js";
 import { getName } from "../../api/helpers/getName.js";
 import { getProfile } from "../../api/listings/profile.js";
@@ -38,13 +38,13 @@ export async function displayProfileData(profileData) {
 
       //   uploadProfilePicture();
 
-      const adminButtons = renderAdminButtons(loggedInUsername);
+      const adminButtons = renderProfileAdminButtons(loggedInUsername);
       if (adminButtons) {
         cardFooter.append(adminButtons);
       }
     } catch (error) {
       console.log(error);
-      displayMessage("#error-message", error, "danger");
+      displayMessage("#profile-error", error, "danger");
       return;
     }
   }
