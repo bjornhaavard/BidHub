@@ -45,7 +45,9 @@
               <div>
                 <img id="profile-img" src="" alt="Generic placeholder image" class="img-fluid mt-4 mb-2" style="width: 150px; z-index: 1" />
               </div>
-              <button type="button" id="edit-profile-btn" class="btn profile-btn btn-outline-light m-3" data-mdb-ripple-color="light">Edit profile</button>
+              <button type="button" id="edit-profile-btn" data-bs-toggle="modal" data-bs-target="#profilePictureModal" class="btn profile-btn btn-outline-light m-3" data-mdb-ripple-color="light">
+                Edit profile
+              </button>
               <h5 class="card-title" id="profile-name"></h5>
               <p class="card-text" id="profile-email"></p>
               <p class="card-text" id="profile-credits"></p>
@@ -65,5 +67,24 @@
         <span class="text-muted">Your online auction site</span>
       </div>
     </footer>
+    <div class="modal fade card-bg-color" id="profilePictureModal" tabindex="-1" aria-labelledby="profilePictureModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="profilePictureModalLabel">Change Profile Picture</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="profilePictureForm">
+              <div class="mb-3">
+                <label for="imageUrl" class="form-label">Image URL</label>
+                <input type="url" class="form-control" id="imageUrl" placeholder="Enter image URL" />
+              </div>
+              <button type="submit" class="btn btn-primary">Update Picture</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
