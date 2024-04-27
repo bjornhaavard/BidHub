@@ -27,15 +27,3 @@ export async function searchListingsHandler() {
     }
   });
 }
-
-// import { searchListings } from "../api/listings/search.js";
-// export async function searchListingsHandler() {
-//   const searchInput = document.getElementById("searchInput");
-//   // const searchButton = document.getElementById("searchButton");
-//   searchInput.addEventListener("input", (event) => {
-//     const searchTerm = event.target.value;
-//     const filteredListings = searchListings(searchTerm);
-//     // Use the filteredListings to update your UI using renderListing (assumed elsewhere)
-//     renderListings(filteredListings);
-//   });
-// }

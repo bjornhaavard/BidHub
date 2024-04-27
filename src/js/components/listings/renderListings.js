@@ -5,8 +5,10 @@ import { renderAdminButtons } from "./renderAdminButtons.js";
 export function renderListings(listings) {
   const loggedInUsername = getName();
 
+  const listingContainer = document.querySelector("#listings-container");
+  listingContainer.innerHTML = "";
+
   listings.map(function (listing) {
-    const listingContainer = document.querySelector("#listings-container");
     const {
       id,
       title,

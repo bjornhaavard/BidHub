@@ -2,12 +2,16 @@ import { getDetails } from "../api/listings/getListings.js";
 import { getParamFromQueryString } from "../api/helpers/getParamFromQueryString.js";
 import { formatCountdown, getTimeRemaining } from "../api/helpers/timeRemain.js";
 import { displayMessage } from "../components/shared/displayMessage.js";
+import { bid } from "../api/listings/bid.js";
+import { getToken } from "../api/helpers/getToken.js";
 // import { renderAdminButtons } from "../components/posts/renderAdminButtons.js";
 
 export async function displaySingleListing(container = "#listing-container") {
   const parentElement = document.querySelector(container);
   const placeHolder = document.querySelector("#spinner");
   const id = getParamFromQueryString("id");
+
+  const token = getToken();
 
   if (!id) {
     location.href = "/";
@@ -154,6 +158,10 @@ export async function displaySingleListing(container = "#listing-container") {
     detailsCol.append(noBidsPara);
   }
 
+  const bidmessageDiv = document.createElement("div");
+  bidmessageDiv.id = "message";
+  detailsCol.append(bidmessageDiv);
+
   // Create the bidding input
   const bidAmountInput = document.createElement("input");
   bidAmountInput.setAttribute("type", "number");
@@ -167,18 +175,29 @@ export async function displaySingleListing(container = "#listing-container") {
   submitButton.textContent = "Place Bid";
 
   // Handle button click (replace with your logic)
-  submitButton.addEventListener("click", () => {
+  submitButton.addEventListener("click", async () => {
     const bidAmount = bidAmountInput.value;
 
     // Validate bid amount (optional)
     if (isNaN(bidAmount) || bidAmount <= 0) {
-      alert("Please enter a valid bid amount.");
+      // alert("Please enter a valid bid amount.");
       return;
     }
 
     // Simulate bid submission (replace with your actual logic)
-    alert(`You submitted a bid of ${bidAmount}`);
+    // alert(`You submitted a bid of ${bidAmount}`);
+    try {
+      await bid(id, { amount: Number(bidAmount) });
+      displayMessage("#message", "asdasdasdasd", "success");
+    } catch (error) {
+      // alert(error.message);
+      console.log(error);
 
+      displayMessage("#message", error.message, "danger");
+    }
+    if (token) {
+      displayMessage("#message", `You have made a ${bidAmount} `, "success");
+    }
     // You may want to clear the input after submission (optional)
     bidAmountInput.value = "";
   });
