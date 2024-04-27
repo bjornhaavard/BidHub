@@ -18,7 +18,7 @@ export async function displaySingleListing(container = "#listing-container") {
   }
 
   const listing = await getDetails(id);
-
+  console.log(listing);
   if (listing) {
     placeHolder.style.display = "none";
   }
@@ -142,7 +142,7 @@ export async function displaySingleListing(container = "#listing-container") {
         highestBidderName = bidderName;
       }
     });
-
+    // const highestBid =
     // Update bidsPara and bidderPara outside the loop to display the final highest bid
     const bidsPara = document.createElement("p");
     bidsPara.textContent = `Highest Bid: ${highestBidAmount} $`;
@@ -160,11 +160,15 @@ export async function displaySingleListing(container = "#listing-container") {
 
   const bidmessageDiv = document.createElement("div");
   bidmessageDiv.id = "message";
-  detailsCol.append(bidmessageDiv);
+  sellerDiv.append(bidmessageDiv);
 
+  //   bids.forEach((bid) => {
+  //     const { amount } = bid; // Destructure directly within forEach
+  //   });
   // Create the bidding input
   const bidAmountInput = document.createElement("input");
   bidAmountInput.setAttribute("type", "number");
+  bidAmountInput.setAttribute("min", " 1");
   bidAmountInput.setAttribute("name", "amount");
   bidAmountInput.setAttribute("placeholder", "Enter your bid amount");
   bidAmountInput.classList.add("form-control");
@@ -188,16 +192,14 @@ export async function displaySingleListing(container = "#listing-container") {
     // alert(`You submitted a bid of ${bidAmount}`);
     try {
       await bid(id, { amount: Number(bidAmount) });
-      displayMessage("#message", "asdasdasdasd", "success");
+      displayMessage("#message", `You have made a bid of ${bidAmount} $`, "success");
     } catch (error) {
-      // alert(error.message);
+      //   alert(error.message);
       console.log(error);
 
       displayMessage("#message", error.message, "danger");
     }
-    if (token) {
-      displayMessage("#message", `You have made a ${bidAmount} `, "success");
-    }
+
     // You may want to clear the input after submission (optional)
     bidAmountInput.value = "";
   });
