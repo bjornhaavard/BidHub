@@ -10,7 +10,7 @@ export function updateProfile() {
       const formData = new FormData(updateForm);
       const avatarUrl = formData.get("avatar");
       updateUserImage(avatarUrl).then(() => {
-        window.location.pathname = "/auth/profile/index.html";
+        // window.location.pathname = "/auth/profile/index.html";
       });
     });
   }
