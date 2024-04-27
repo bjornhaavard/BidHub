@@ -36,6 +36,12 @@ function router() {
 
       break;
 
+    case "/BidHub/auth/profile/updateProfileImage/":
+    case "/BidHub/auth/profile/updateProfileImage/index.html":
+      updateProfile();
+
+      break;
+
     case "/auth/login/":
     case "/auth/login/index.html":
       handlers.setLoginFormListener();

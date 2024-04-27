@@ -12,6 +12,7 @@ export function updateProfile() {
       updateUserImage(avatarUrl).then(() => {
         window.location.pathname = "profile/index.html";
       });
+      console.log(avatarUrl);
     });
   }
 }
