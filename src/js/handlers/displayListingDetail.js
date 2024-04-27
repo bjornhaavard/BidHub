@@ -151,61 +151,60 @@ export async function displaySingleListing(container = "#listing-container") {
     const bidderPara = document.createElement("p");
     bidderPara.textContent = `Bidder: ${highestBidderName}`;
     detailsCol.append(bidderPara);
+    const bidmessageDiv = document.createElement("div");
+    bidmessageDiv.id = "message";
+    sellerDiv.append(bidmessageDiv);
+
+    //   bids.forEach((bid) => {
+    //     const { amount } = bid; // Destructure directly within forEach
+    //   });
+    // Create the bidding input
+    const bidAmountInput = document.createElement("input");
+    bidAmountInput.setAttribute("type", "number");
+    bidAmountInput.setAttribute("min", `${highestBidAmount + 1}`);
+    bidAmountInput.setAttribute("name", "amount");
+    bidAmountInput.setAttribute("placeholder", "Enter your bid amount");
+    bidAmountInput.classList.add("form-control");
+
+    // Create the submit button
+    const submitButton = document.createElement("button");
+    submitButton.classList.add("btn", "btn-primary", "btn-outline-light", "my-2");
+    submitButton.textContent = "Place Bid";
+
+    // Handle button click (replace with your logic)
+    submitButton.addEventListener("click", async () => {
+      const bidAmount = bidAmountInput.value;
+
+      // Validate bid amount (optional)
+      if (isNaN(bidAmount) || bidAmount <= 0) {
+        // alert("Please enter a valid bid amount.");
+        return;
+      }
+
+      // Simulate bid submission (replace with your actual logic)
+      // alert(`You submitted a bid of ${bidAmount}`);
+      try {
+        await bid(id, { amount: Number(bidAmount) });
+        displayMessage("#message", `You have made a bid of ${bidAmount} $`, "success");
+      } catch (error) {
+        //   alert(error.message);
+        console.log(error);
+
+        displayMessage("#message", error.message, "danger");
+      }
+
+      // clear the input after submission
+      bidAmountInput.value = "";
+    });
+
+    // Add the input and button to the container
+    detailsCol.append(bidAmountInput, submitButton);
   } else {
     // Handle the case where there are no bids
     const noBidsPara = document.createElement("p");
     noBidsPara.textContent = "No bids yet.";
     detailsCol.append(noBidsPara);
   }
-
-  const bidmessageDiv = document.createElement("div");
-  bidmessageDiv.id = "message";
-  sellerDiv.append(bidmessageDiv);
-
-  //   bids.forEach((bid) => {
-  //     const { amount } = bid; // Destructure directly within forEach
-  //   });
-  // Create the bidding input
-  const bidAmountInput = document.createElement("input");
-  bidAmountInput.setAttribute("type", "number");
-  bidAmountInput.setAttribute("min", " 1");
-  bidAmountInput.setAttribute("name", "amount");
-  bidAmountInput.setAttribute("placeholder", "Enter your bid amount");
-  bidAmountInput.classList.add("form-control");
-
-  // Create the submit button
-  const submitButton = document.createElement("button");
-  submitButton.classList.add("btn", "btn-primary", "btn-outline-light", "my-2");
-  submitButton.textContent = "Place Bid";
-
-  // Handle button click (replace with your logic)
-  submitButton.addEventListener("click", async () => {
-    const bidAmount = bidAmountInput.value;
-
-    // Validate bid amount (optional)
-    if (isNaN(bidAmount) || bidAmount <= 0) {
-      // alert("Please enter a valid bid amount.");
-      return;
-    }
-
-    // Simulate bid submission (replace with your actual logic)
-    // alert(`You submitted a bid of ${bidAmount}`);
-    try {
-      await bid(id, { amount: Number(bidAmount) });
-      displayMessage("#message", `You have made a bid of ${bidAmount} $`, "success");
-    } catch (error) {
-      //   alert(error.message);
-      console.log(error);
-
-      displayMessage("#message", error.message, "danger");
-    }
-
-    // You may want to clear the input after submission (optional)
-    bidAmountInput.value = "";
-  });
-
-  // Add the input and button to the container
-  detailsCol.append(bidAmountInput, submitButton);
 
   //   renderAdminButtons(div, name, id);
 
