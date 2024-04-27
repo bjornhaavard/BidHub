@@ -2,7 +2,7 @@ import { updateUserImage } from "../api/auth/updateProfileAvatar.js";
 
 export function updateProfile() {
   const updateForm = document.querySelector("form#updateProfileForm");
-
+  console.log(updateForm);
   if (updateForm) {
     updateForm.addEventListener("submit", async (e) => {
       e.preventDefault();
