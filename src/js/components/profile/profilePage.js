@@ -1,6 +1,5 @@
 import { defaultAvatarImage } from "../../api/constants.js";
 import { renderProfileAdminButtons } from "../listings/renderAdminButtons.js";
-// import { uploadProfilePicture } from "../../api/helpers/editProfileButton.js";
 import { getName } from "../../api/helpers/getName.js";
 import { getProfile } from "../../api/listings/profile.js";
 

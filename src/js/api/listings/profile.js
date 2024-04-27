@@ -23,5 +23,5 @@ export async function getProfile() {
     return await response.json();
   }
 
-  throw new Error(displayMessage("#error-message", response.status, "danger"));
+  throw new Error(displayMessage("#profile-error", response.status, "danger"));
 }
