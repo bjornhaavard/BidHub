@@ -4,7 +4,7 @@ export const API_LISTINGS = "/auction/listings";
 export const API_LOGIN = "/auction/auth/login";
 export const API_REGISTER = "/auction/auth/register";
 export const API_AUCTION = "/auction";
-export const API_PROFILE_IMG = "https://api.noroff.dev/api/v1/auction/profile";
+export const API_PROFILE_IMG = "https://api.noroff.dev/api/v1/auction/profile/";
 export const API_PROFILE = `${API_HOST_URL}${API_BASE}${API_AUCTION}`;
 export const API_CREATE_LISTING = `${API_HOST_URL}${API_BASE}${API_LISTINGS}`;
 

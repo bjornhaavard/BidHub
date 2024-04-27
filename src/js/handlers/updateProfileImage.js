@@ -1,9 +1,9 @@
-// import { displayMessage } from "../components/shared/displayMessage.js";
+import { displayMessage } from "../components/shared/displayMessage.js";
 import { API_PROFILE_IMG } from "../api/constants.js";
 
 export async function updateProfileMedia(name, imageUrl) {
-  const url = `${API_PROFILE_IMG.replace("{name}", name)}`;
-
+  const url = `${API_PROFILE_IMG.replace("{name}/media", name)}`;
+  console.log(url);
   try {
     const response = await fetch(url, {
       method: "PUT",
@@ -30,13 +30,13 @@ export async function updateProfileMedia(name, imageUrl) {
 // ... rest of your profile edit code
 
 // Example usage within the profile edit functionality
-// const profileName = document.getElementById("profile-name").textContent; // Assuming this holds the user's name
-// const newImageUrl = document.getElementById("profile-image-url").value; // Assuming this is an input field for the new image URL
+const profileName = document.getElementById("profile-name").textContent; // Assuming this holds the user's name
+const newImageUrl = document.getElementById("profile-image-url").value; // Assuming this is an input field for the new image URL
 
-// updateProfileMedia(profileName, newImageUrl)
-//   .then(() => {
-//     // Update UI or display success message (optional)
-//   })
-//   .catch((error) => {
-//     displayMessage("#profile-error", error.message, "danger");
-//   });
+updateProfileMedia(profileName, newImageUrl)
+  .then(() => {
+    // Update UI or display success message (optional)
+  })
+  .catch((error) => {
+    displayMessage("#profile-error", error.message, "danger");
+  });
