@@ -5,7 +5,7 @@ import { displayListings } from "./handlers/displayListing.js";
 import { searchListingsHandler } from "./handlers/searchListings.js";
 import { displayProfileData } from "./components/profile/profilePage.js";
 import { hidelinks, hideLogin } from "./api/helpers/hideLink.js";
-import { updateProfileMedia } from "./handlers/updateProfileImage.js";
+import { updateProfile } from "./handlers/updateProfileImage.js";
 
 function router() {
   const path = window.location.pathname;
@@ -31,7 +31,7 @@ function router() {
       // Handle the profile path
       hideLogin();
       displayProfileData();
-      updateProfileMedia();
+      updateProfile();
       handlers.logOut();
 
       break;

@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="/src/js/index.js"></script>
+    <title>BidHub | Update profile image</title>
+    <meta name="description" content="login page" />
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=press-start-2p" />
+    <link rel="stylesheet" href="/dist/css/index.css" />
+  </head>
+  <body class="h-100">
+    <header>
+      <nav class="navbar navbar-dark fixed-top navbar-expand-lg p-3" aria-label="Feed">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">BidHub</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon" id="login-link"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbars">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav nav-pills">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="feed" href="/">Items</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link profile-link activesd" id="profile-link" href="/auth/profile/">Profile</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="flex-shrink-0">
+      <section class="vh-100 gradient-custom">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card" style="border-radius: 1rem">
+                <div class="card-body p-5 text-center">
+                  <div class="mb-md-3 mt-md-3 pb-3">
+                    <h3 class="fw-bold mb-2 text-uppercase">Update Avatar</h3>
+                    <form id="updateProfilForm">
+                      <div class="form-label mb-4 mt-4">
+                        <input type="text" placeholder="Must be valid image url" class="form-control" id="avatar" name="avatar" required />
+                        <label for="avatar" class="mt-2">imageUrl</label>
+                      </div>
+                      <button class="btn btn-outline-light btn-lg px-5 mb-3" type="submit">Update</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer mt-auto py-3 py-3 my-4 border-top">
+      <div class="container d-flex justify-content-center">
+        <span class="text-muted">© 2024 BidHub </span>
+      </div>
+      <div class="container d-flex justify-content-center">
+        <span class="text-muted">Your online auction site</span>
+      </div>
+    </footer>
+  </body>
+</html>
