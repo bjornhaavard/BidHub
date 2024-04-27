@@ -35,7 +35,8 @@ function router() {
       handlers.logOut();
 
       break;
-
+    case "/auth/profile/updateProfileImage/":
+    case "/auth/profile/updateProfileImage/index.html":
     case "/BidHub/auth/profile/updateProfileImage/":
     case "/BidHub/auth/profile/updateProfileImage/index.html":
       updateProfile();
