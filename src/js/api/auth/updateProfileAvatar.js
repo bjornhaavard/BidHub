@@ -4,8 +4,9 @@ import { API_PROFILE_IMG } from "../constants.js";
 
 export async function updateUserImage(avatar) {
   try {
-    const userProfile = JSON.parse(storage.load("userProfile"));
-    const response = await fetch(`${API_PROFILE_IMG}${userProfile.name}/media`, {
+    const profile = JSON.parse(storage.load("profile"));
+    console.log(profile);
+    const response = await fetch(`${API_PROFILE_IMG}${profile.name}/media`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -13,12 +14,14 @@ export async function updateUserImage(avatar) {
       },
       body: JSON.stringify({ avatar: avatar }),
     });
+    console.log(response);
     if (response.ok) {
-      userProfile.avatar = avatar;
-      storage.save("userProfile", JSON.stringify(userProfile));
+      profile.avatar = avatar;
+      storage.save("profile", JSON.stringify(profile));
       return await response.json();
     }
   } catch (error) {
+    console.log(error);
     displayMessage("#profile-error", error, "danger");
   }
 }
