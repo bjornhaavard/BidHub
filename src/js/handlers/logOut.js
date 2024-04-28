@@ -13,3 +13,17 @@ export function logOut() {
     }
   });
 }
+
+export function navLogOut() {
+  const logoutNavButton = document.querySelector("#logout-link");
+  logoutNavButton.addEventListener("click", async (event) => {
+    event.preventDefault();
+
+    const shouldLogout = confirm("Are you sure you want to logout?");
+    if (shouldLogout) {
+      storage.remove("token");
+      storage.remove("profile");
+      window.location.href = "/";
+    }
+  });
+}

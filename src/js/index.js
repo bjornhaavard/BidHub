@@ -4,8 +4,10 @@ import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
 import { searchListingsHandler } from "./handlers/searchListings.js";
 import { displayProfileData } from "./components/profile/profilePage.js";
-import { hidelinks, hideLogin } from "./api/helpers/hideLink.js";
+import { hidelinks, hideLogin, hideLogout } from "./api/helpers/hideLink.js";
 import { updateProfile } from "./handlers/updateProfileImage.js";
+import { sortListingsHandler } from "./handlers/sortListings.js";
+import { navLogOut } from "./handlers/logOut.js";
 
 function router() {
   const path = window.location.pathname;
@@ -21,6 +23,9 @@ function router() {
       searchListingsHandler();
       hidelinks();
       hideLogin();
+      sortListingsHandler();
+      navLogOut();
+      hideLogout();
 
       break;
 

@@ -32,3 +32,10 @@
 .navbar-toggler {
   margin-bottom: 8px;
 }
+
+.logout {
+  color: colors.$red;
+  &:hover {
+    color: colors.$background-color;
+  }
+}

@@ -14,9 +14,11 @@ export function renderListings(listings) {
       title,
       endsAt,
       media,
+      bids: { length },
       seller: { name },
     } = listing;
 
+    console.log(listing);
     const divContainer = document.createElement("div");
     divContainer.classList.add("col", "col-md-6", "col-lg-4");
     listingContainer.append(divContainer);
@@ -54,6 +56,11 @@ export function renderListings(listings) {
     ends.classList.add("countdown");
     ends.textContent = `Ends: ${parseDate(endsAt)}`;
     divCardBody.append(ends);
+
+    const bid = document.createElement("p");
+    bid.classList.add("card-text");
+    bid.textContent = `${length} bids`;
+    divCardBody.append(bid);
 
     const link = document.createElement("a");
     link.href = `/auctions/index.html?id=${id}`;

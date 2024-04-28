@@ -14,3 +14,11 @@ export function hideLogin() {
     loginLink.style.display = "none";
   }
 }
+
+export function hideLogout() {
+  const logoutLink = document.getElementById("logout-link");
+  const token = localStorage.getItem("token");
+  if (!token) {
+    logoutLink.style.display = "none";
+  }
+}

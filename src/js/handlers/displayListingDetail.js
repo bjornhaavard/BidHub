@@ -4,6 +4,7 @@ import { formatCountdown, getTimeRemaining } from "../api/helpers/timeRemain.js"
 import { displayMessage } from "../components/shared/displayMessage.js";
 import { bid } from "../api/listings/bid.js";
 import { getToken } from "../api/helpers/getToken.js";
+import { defaultAvatarImage } from "../api/constants.js";
 // import { renderAdminButtons } from "../components/posts/renderAdminButtons.js";
 
 export async function displaySingleListing(container = "#listing-container") {
@@ -118,7 +119,7 @@ export async function displaySingleListing(container = "#listing-container") {
 
   const sellerImg = document.createElement("img");
   sellerImg.classList.add("rounded-circle", "my-2");
-  sellerImg.src = avatar;
+  sellerImg.src = avatar || defaultAvatarImage;
   sellerImg.alt = "Seller Avatar";
   sellerImg.width = 50;
   sellerImg.height = 50;
@@ -128,7 +129,7 @@ export async function displaySingleListing(container = "#listing-container") {
   sellerPara.classList.add("align-self-center", "mx-3");
   sellerPara.textContent = `Seller: ${name}`;
   sellerDiv.append(sellerPara);
-
+  // const highestBid =
   if (bids) {
     let highestBidAmount = 0;
     let highestBidderName = "";
@@ -142,7 +143,7 @@ export async function displaySingleListing(container = "#listing-container") {
         highestBidderName = bidderName;
       }
     });
-    // const highestBid =
+
     // Update bidsPara and bidderPara outside the loop to display the final highest bid
     const bidsPara = document.createElement("p");
     bidsPara.textContent = `Highest Bid: ${highestBidAmount} $`;
@@ -151,13 +152,11 @@ export async function displaySingleListing(container = "#listing-container") {
     const bidderPara = document.createElement("p");
     bidderPara.textContent = `Bidder: ${highestBidderName}`;
     detailsCol.append(bidderPara);
+
     const bidmessageDiv = document.createElement("div");
     bidmessageDiv.id = "message";
     sellerDiv.append(bidmessageDiv);
 
-    //   bids.forEach((bid) => {
-    //     const { amount } = bid; // Destructure directly within forEach
-    //   });
     // Create the bidding input
     const bidAmountInput = document.createElement("input");
     bidAmountInput.setAttribute("type", "number");
@@ -187,11 +186,13 @@ export async function displaySingleListing(container = "#listing-container") {
         await bid(id, { amount: Number(bidAmount) });
         displayMessage("#message", `You have made a bid of ${bidAmount} $`, "success");
       } catch (error) {
-        //   alert(error.message);
-        console.log(error);
-
         displayMessage("#message", error.message, "danger");
+        console.log(error);
+        if (!token) {
+          displayMessage("#message", "Please log in to place a bid", "danger");
+        }
       }
+      //   displayMessage("#message", error.message, "danger");
 
       // clear the input after submission
       bidAmountInput.value = "";
@@ -205,8 +206,43 @@ export async function displaySingleListing(container = "#listing-container") {
     noBidsPara.textContent = "No bids yet.";
     detailsCol.append(noBidsPara);
   }
+  const hr3 = document.createElement("hr");
+  detailsCol.append(hr3);
 
-  //   renderAdminButtons(div, name, id);
+  const outerContainer = document.createElement("div");
+  outerContainer.classList.add("container", "col-md-12"); // Adjust class name
+  parentElement.append(outerContainer);
 
-  //   getPostComments();
+  const bidsContainer = document.createElement("div");
+  bidsContainer.classList.add("card-body", "p-3", "mb-5"); // Add a class for styling
+  outerContainer.append(bidsContainer);
+
+  const bidsHeading = document.createElement("h3");
+  bidsHeading.classList.add("text-center", "mb-3"); // Add a class for styling
+  bidsHeading.textContent = "Previous Bids:";
+  bidsContainer.append(bidsHeading);
+
+  const hr4 = document.createElement("hr");
+  bidsContainer.append(hr4);
+
+  if (token) {
+    bids.forEach((bid) => {
+      // Access bid details (amount, bidderName) from each object
+
+      const { amount, bidderName, created } = bid;
+
+      const dateObject = new Date(created);
+      const formattedDate = dateObject.toLocaleString("no-NO");
+
+      // Create a bid element
+
+      const bidElement = document.createElement("p");
+      bidElement.textContent = `Bid: ${amount} $ by ${bidderName}, created: ${formattedDate}`;
+
+      // Add the bid element to the bids container
+
+      bidsContainer.append(bidElement);
+    });
+  }
+  //   container.append(allBids);
 }
