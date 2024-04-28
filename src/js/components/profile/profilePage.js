@@ -40,6 +40,7 @@ export async function displayProfileData(profileData) {
       const adminButtons = renderProfileAdminButtons(loggedInUsername);
       if (adminButtons) {
         cardFooter.append(adminButtons);
+        return profileData;
       }
     } catch (error) {
       console.log(error);

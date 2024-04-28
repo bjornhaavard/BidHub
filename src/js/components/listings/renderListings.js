@@ -1,6 +1,9 @@
 import { getName } from "../../api/helpers/getName.js";
+import { getToken } from "../../api/helpers/getToken.js";
 import { parseDate } from "../../api/helpers/parse.js";
+// import { displayProfileData } from "../profile/profilePage.js";
 import { renderAdminButtons } from "./renderAdminButtons.js";
+import { getProfileCredits } from "../../api/helpers/getName.js";
 
 export function renderListings(listings) {
   const loggedInUsername = getName();
@@ -18,7 +21,7 @@ export function renderListings(listings) {
       seller: { name },
     } = listing;
 
-    console.log(listing);
+    // console.log(listing);
     const divContainer = document.createElement("div");
     divContainer.classList.add("col", "col-md-6", "col-lg-4");
     listingContainer.append(divContainer);
@@ -74,4 +77,16 @@ export function renderListings(listings) {
       divCardBody.append(adminButtons);
     }
   });
+
+  const token = getToken();
+
+  if (token) {
+    const profileCredits = getProfileCredits();
+    const navbar = document.getElementById("profile-credits");
+    const showCredits = document.createElement("div");
+    showCredits.classList.add("card-text", "navbar-dark", "justify-self-end");
+    showCredits.textContent = `Credits: ${profileCredits}`;
+    navbar.append(showCredits);
+    console.log(profileCredits);
+  }
 }

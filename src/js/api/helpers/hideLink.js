@@ -16,7 +16,7 @@ export function hideLogin() {
 }
 
 export function hideLogout() {
-  const logoutLink = document.getElementById("logout-link");
+  const logoutLink = document.getElementById("menu-dropdown");
   const token = localStorage.getItem("token");
   if (!token) {
     logoutLink.style.display = "none";

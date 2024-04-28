@@ -12,6 +12,7 @@ export function createListingFormListener() {
     const listing = Object.fromEntries(formData.entries());
 
     listing.media = formData.get("media") ? listing.media.split(",").map((item) => item.trim()) : [];
+    listing.tags = listing.tags.split(",").map((item) => item.trim());
 
     try {
       await createListing(listing);

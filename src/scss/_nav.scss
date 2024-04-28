@@ -12,6 +12,10 @@
   }
 }
 
+.nav-dark-bg {
+  background-color: colors.$card-bg-color;
+}
+
 .nav-link.active,
 .nav-link.show {
   background-color: colors.$hover-bg-color;

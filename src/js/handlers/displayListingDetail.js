@@ -5,7 +5,7 @@ import { displayMessage } from "../components/shared/displayMessage.js";
 import { bid } from "../api/listings/bid.js";
 import { getToken } from "../api/helpers/getToken.js";
 import { defaultAvatarImage } from "../api/constants.js";
-// import { renderAdminButtons } from "../components/posts/renderAdminButtons.js";
+import { getProfileCredits } from "../api/helpers/getName.js";
 
 export async function displaySingleListing(container = "#listing-container") {
   const parentElement = document.querySelector(container);
@@ -243,6 +243,15 @@ export async function displaySingleListing(container = "#listing-container") {
 
       bidsContainer.append(bidElement);
     });
+    if (token) {
+      const profileCredits = getProfileCredits();
+      const navbar = document.getElementById("profile-credits");
+      const showCredits = document.createElement("div");
+      showCredits.classList.add("card-text", "navbar-dark", "justify-self-end");
+      showCredits.textContent = `Credits: ${profileCredits}`;
+      navbar.append(showCredits);
+      console.log(profileCredits);
+    }
   }
   //   container.append(allBids);
 }

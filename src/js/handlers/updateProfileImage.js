@@ -1,8 +1,18 @@
+/**
+ * Updates the user's profile information.
+ *
+ * This function handles form submission for updating the user's profile. It retrieves
+ * the submitted data, attempts to update the profile image using the `updateUserImage`
+ * function, and redirects the user to the profile page on success.
+ *
+ * @throws {Error}  - Re-throws any errors encountered during profile image update.
+ */
+
 import { updateUserImage } from "../api/auth/updateProfileAvatar.js";
 
 export function updateProfile() {
   const updateForm = document.querySelector("form#updateProfileForm");
-  console.log(updateForm);
+
   if (updateForm) {
     updateForm.addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -16,7 +26,7 @@ export function updateProfile() {
         console.log(error);
       }
 
-      //   window.location.pathname = "/auth/profile/index.html";
+      window.location.pathname = "/auth/profile/index.html";
     });
   }
 }

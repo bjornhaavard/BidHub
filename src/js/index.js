@@ -8,6 +8,7 @@ import { hidelinks, hideLogin, hideLogout } from "./api/helpers/hideLink.js";
 import { updateProfile } from "./handlers/updateProfileImage.js";
 import { sortListingsHandler } from "./handlers/sortListings.js";
 import { navLogOut } from "./handlers/logOut.js";
+// import { renderUserCredits } from "./handlers/renderMenu.js";
 
 function router() {
   const path = window.location.pathname;
@@ -26,6 +27,7 @@ function router() {
       sortListingsHandler();
       navLogOut();
       hideLogout();
+      // renderUserCredits();
 
       break;
 
@@ -66,6 +68,8 @@ function router() {
       handlers.displaySingleListing();
       hidelinks();
       hideLogin();
+      hideLogout();
+      navLogOut();
       break;
 
     case "/auctions/newListing/":

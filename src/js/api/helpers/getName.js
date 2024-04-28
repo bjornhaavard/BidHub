@@ -21,3 +21,8 @@ export function getName() {
   const profile = storage.load("profile");
   return profile?.name;
 }
+
+export function getProfileCredits() {
+  const profileCredits = storage.load("profile");
+  return profileCredits?.credits;
+}
