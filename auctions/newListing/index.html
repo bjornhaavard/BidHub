@@ -6,6 +6,10 @@
     <script type="module" src="/src/js/index.js"></script>
     <title>BidHub | New Listing</title>
     <meta name="description" content="new listings page" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -73,8 +77,13 @@
                         </div>
 
                       <div class="form-floating mb-4">
-                            <input type="url" class="form-control" name="media" id="new-post-media" placeholder="media, must be a valid url" />
+                            <input type="url" class="form-control" name="media" id="new-listing-media" placeholder="media, must be a valid url" />
                             <label for="url" class="form-label">Media</label>
+                      </div>
+
+                      <div class="form-floating mb-4">
+                        <input type="text" class="form-control" name="tags" id="new-listing-tag" placeholder="tags" />
+                        <label class="form-label" for="tags">Tags</label>
                       </div>
     
   
