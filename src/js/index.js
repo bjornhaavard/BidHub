@@ -50,8 +50,8 @@ function router() {
 
       break;
 
-    case "../../auth/login/":
-    case "../../auth/login/index.html":
+    case "/auth/login/":
+    case "/auth/login/index.html":
       handlers.setLoginFormListener();
       hidelinks();
 
