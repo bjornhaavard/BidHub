@@ -15,7 +15,7 @@ export function setRegisterFormListener() {
 
     try {
       await register(profile);
-      displayMessage("#message", 'Registration successful. Please <a href="/auth/login">login</a>', "dark");
+      displayMessage("#message", 'Registration successful. Please <a href="../../../BidHub/auth/login/">login</a>', "dark");
       form.reset();
     } catch (error) {
       console.error(error);
