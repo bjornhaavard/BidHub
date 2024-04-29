@@ -52,8 +52,8 @@ function router() {
 
     case "/auth/login/":
     case "/auth/login/index.html":
-    case "../../../BidHub/auth/login/index.html":
-    case "../../../BidHub/auth/login/":
+    case "/BidHub/auth/login/index.html":
+    case "/BidHub/auth/login/":
       handlers.setLoginFormListener();
       hidelinks();
 
