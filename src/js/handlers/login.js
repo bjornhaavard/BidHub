@@ -48,8 +48,7 @@ export function setLoginFormListener() {
       storage.save("profile", userProfile);
 
       // Redirect to the profile page
-      location.href = "../../../auth/profile/";
-      // location.href = "/auth/profile/";
+      location.href = "../../../BidHub/auth/profile/" || "/auth/profile/";
     } catch (error) {
       // Display an error message if login fails
       displayMessage("#message", error.message, "danger");
