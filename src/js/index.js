@@ -44,33 +44,33 @@ function router() {
       break;
     case "/auth/profile/updateProfileImage/":
     case "/auth/profile/updateProfileImage/index.html":
-    case "../../BidHub/auth/profile/updateProfileImage/":
-    case "../../BidHub/auth/profile/updateProfileImage/index.html":
+    case "/BidHub/auth/profile/updateProfileImage/":
+    case "/BidHub/auth/profile/updateProfileImage/index.html":
       updateProfile();
 
       break;
 
     case "/auth/login/":
     case "/auth/login/index.html":
-    case "../../Bidhub/auth/login/index.html":
-    case "../../Bidhub/auth/login/":
+    case "/BidHub/auth/login/index.html":
+    case "/BidHub/auth/login/":
       handlers.setLoginFormListener();
       hidelinks();
 
       break;
 
     case "/auth/register/":
-    case "/Bidhub/auth/register/":
+    case "/BidHub/auth/register/":
     case "/auth/register/index.html":
-    case "/Bidhub/auth/register/index.html":
+    case "/BidHub/auth/register/index.html":
       handlers.setRegisterFormListener();
 
       break;
 
     case "/auctions/":
-    case "/Bidhub/auctions/":
+    case "/BidHub/auctions/":
     case "/auctions/index.html":
-    case "/Bidhub/auctions/index.html":
+    case "/BidHub/auctions/index.html":
       handlers.displaySingleListing();
       hidelinks();
       hideLogin();
@@ -78,9 +78,9 @@ function router() {
       navLogOut();
       break;
 
-    case "/Bidhub/auctions/newListing/":
+    case "/BidHub/auctions/newListing/":
     case "/auctions/newListing/":
-    case "/Bidhub/auctions/newListing/index.html":
+    case "/BidHub/auctions/newListing/index.html":
     case "/auctions/newListing/index.html":
       handlers.createListingFormListener();
   }
