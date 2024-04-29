@@ -66,7 +66,7 @@ export function renderListings(listings) {
     divCardBody.append(bid);
 
     const link = document.createElement("a");
-    link.href = `/BidHub/auctions/index.html?id=${id}`;
+    link.href = `/BidHub/auctions/?id=${id}`;
     link.classList.add("btn", "btn-primary", "btn-outline-light");
     link.textContent = "View";
 
