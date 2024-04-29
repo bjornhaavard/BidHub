@@ -16,7 +16,7 @@ export function createListingFormListener() {
 
     try {
       await createListing(listing);
-      displayMessage("#message", 'added listing successful. Please go to <a href="../../../">Items</a>', "success");
+      displayMessage("#message", 'added listing successful. Please go to <a href="/BidHub/">Items</a>', "success");
       form.reset();
     } catch (error) {
       console.error(error);
