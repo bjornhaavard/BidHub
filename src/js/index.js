@@ -52,19 +52,25 @@ function router() {
 
     case "/auth/login/":
     case "/auth/login/index.html":
+    case "/Bidhub/auth/login/index.html":
+    case "/Bidhub/auth/login/":
       handlers.setLoginFormListener();
       hidelinks();
 
       break;
 
     case "/auth/register/":
+    case "/Bidhub/auth/register/":
     case "/auth/register/index.html":
+    case "/Bidhub/auth/register/index.html":
       handlers.setRegisterFormListener();
 
       break;
 
     case "/auctions/":
+    case "/Bidhub/auctions/":
     case "/auctions/index.html":
+    case "/Bidhub/auctions/index.html":
       handlers.displaySingleListing();
       hidelinks();
       hideLogin();
@@ -72,7 +78,9 @@ function router() {
       navLogOut();
       break;
 
+    case "/Bidhub/auctions/newListing/":
     case "/auctions/newListing/":
+    case "/Bidhub/auctions/newListing/index.html":
     case "/auctions/newListing/index.html":
       handlers.createListingFormListener();
   }
