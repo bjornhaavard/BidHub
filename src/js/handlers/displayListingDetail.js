@@ -181,10 +181,15 @@ export async function displaySingleListing(container = "#listing-container") {
       }
 
       // Simulate bid submission (replace with your actual logic)
-      // alert(`You submitted a bid of ${bidAmount}`);
+
       try {
         await bid(id, { amount: Number(bidAmount) });
         displayMessage("#message", `You have made a bid of ${bidAmount} $`, "success");
+        // Simulate a short delay to display the success message
+        await new Promise((resolve) => setTimeout(resolve, 2000)); // Wait 2 seconds
+
+        // Redirect to the same page to refresh data (optional)
+        window.location.reload(); // Or redirect to a specific page
       } catch (error) {
         displayMessage("#message", error.message, "danger");
         console.log(error);
