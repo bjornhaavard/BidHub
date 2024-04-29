@@ -60,16 +60,16 @@ function router() {
       break;
 
     case "/auth/register/":
-    case "/BidHub/auth/register/":
     case "/auth/register/index.html":
+    case "/BidHub/auth/register/":
     case "/BidHub/auth/register/index.html":
       handlers.setRegisterFormListener();
 
       break;
 
     case "/auctions/":
-    case "/BidHub/auctions/":
     case "/auctions/index.html":
+    case "/BidHub/auctions/":
     case "/BidHub/auctions/index.html":
       handlers.displaySingleListing();
       hidelinks();
@@ -78,10 +78,10 @@ function router() {
       navLogOut();
       break;
 
-    case "/BidHub/auctions/newListing/":
     case "/auctions/newListing/":
-    case "/BidHub/auctions/newListing/index.html":
     case "/auctions/newListing/index.html":
+    case "/BidHub/auctions/newListing/":
+    case "/BidHub/auctions/newListing/index.html":
       handlers.createListingFormListener();
   }
 }
