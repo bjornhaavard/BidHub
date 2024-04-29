@@ -12,7 +12,7 @@ import { navLogOut } from "./handlers/logOut.js";
 
 function router() {
   const path = window.location.pathname;
-
+  console.log(path);
   switch (path) {
     case "/":
     case "/index.html":
