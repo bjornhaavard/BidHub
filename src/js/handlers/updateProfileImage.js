@@ -26,7 +26,7 @@ export function updateProfile() {
         console.log(error);
       }
 
-      window.location.pathname = "/auth/profile/index.html";
+      window.location.pathname = "../../../BidHub/auth/profile/";
     });
   }
 }
