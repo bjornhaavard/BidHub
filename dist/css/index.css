@@ -3355,7 +3355,7 @@ textarea.form-control-lg {
   --bs-dropdown-box-shadow: var(--bs-box-shadow);
   --bs-dropdown-link-color: var(--bs-body-color);
   --bs-dropdown-link-hover-color: var(--bs-body-color);
-  --bs-dropdown-link-hover-bg: var(--bs-tertiary-bg);
+  --bs-dropdown-link-hover-bg: #001f3f;
   --bs-dropdown-link-active-color: #fff;
   --bs-dropdown-link-active-bg: #001f3f;
   --bs-dropdown-link-disabled-color: var(--bs-tertiary-color);
@@ -3806,7 +3806,7 @@ textarea.form-control-lg {
 .nav-pills {
   --bs-nav-pills-border-radius: var(--bs-border-radius);
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: #b8c9a8;
+  --bs-nav-pills-link-active-bg: #45574a;
 }
 .nav-pills .nav-link {
   border-radius: var(--bs-nav-pills-border-radius);
@@ -11872,6 +11872,28 @@ textarea.form-control-lg {
 
 a {
   color: #fffff2;
+  background-color: #001f3f;
+  padding: 3px;
+}
+
+.card {
+  display: flex; /* Enable flexbox for card */
+  flex-direction: column; /* Arrange content vertically */
+  background-color: #b8c9a8;
+  min-height: 300px; /* Set minimum card height (adjust as needed) */
+}
+
+.card-bg {
+  background-color: #001f3f;
+  min-height: 150px;
+  max-height: 250px;
+}
+
+.card-img-top {
+  flex: 1; /* Allow image to fill remaining space */
+  object-fit: cover; /* Crop image to fit container */
+  min-height: 250px;
+  max-height: 251px;
 }
 
 .card {
@@ -11897,8 +11919,9 @@ a {
   border-radius: 3px;
 }
 
-.nav-link.active {
-  background-color: #b8c9a8;
+.nav-link.active,
+.nav-link.show {
+  background-color: #45574a;
   border-radius: 3px;
 }
 
@@ -11911,6 +11934,10 @@ a {
 
 .navbar-toggler-icon {
   color: #fffff2;
+}
+
+.navbar-toggler {
+  margin-bottom: 8px;
 }
 
 /*# sourceMappingURL=index.css.map */

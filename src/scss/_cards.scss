@@ -28,16 +28,26 @@
 }
 a {
   color: colors.$white;
+  background-color: colors.$card-bg-color;
+  padding: 3px;
 }
 
 .card {
   display: flex; /* Enable flexbox for card */
   flex-direction: column; /* Arrange content vertically */
-  min-height: 130px; /* Set minimum card height (adjust as needed) */
+  background-color: colors.$background-color;
+  min-height: 300px; /* Set minimum card height (adjust as needed) */
+}
+
+.card-bg {
+  background-color: colors.$card-bg-color;
+  min-height: 150px;
+  max-height: 250px;
 }
 
 .card-img-top {
-  height: 350px;
-  // flex: 1; /* Allow image to fill remaining space */
+  flex: 1; /* Allow image to fill remaining space */
   object-fit: cover; /* Crop image to fit container */
+  min-height: 250px;
+  max-height: 251px;
 }

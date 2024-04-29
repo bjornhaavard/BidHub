@@ -12,8 +12,13 @@
   }
 }
 
-.nav-link.active {
-  background-color: colors.$background-color;
+.nav-dark-bg {
+  background-color: colors.$card-bg-color;
+}
+
+.nav-link.active,
+.nav-link.show {
+  background-color: colors.$hover-bg-color;
   border-radius: 3px;
 }
 
@@ -26,4 +31,15 @@
 
 .navbar-toggler-icon {
   color: colors.$white;
+}
+
+.navbar-toggler {
+  margin-bottom: 8px;
+}
+
+.logout {
+  color: colors.$red;
+  &:hover {
+    color: colors.$background-color;
+  }
 }

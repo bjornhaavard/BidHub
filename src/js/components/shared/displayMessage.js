@@ -15,8 +15,9 @@
  */
 
 export function displayMessage(parent, message, alertType) {
-    const container = document.querySelector(parent);
-  
+  const container = document.querySelector(parent);
+
+  if (container) {
     container.innerHTML = `<div class="alert alert-${alertType} text-center mt-3">${message}</div>`;
   }
-  
+}
