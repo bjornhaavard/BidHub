@@ -50,7 +50,7 @@ export async function displaySingleListing(container = "#listing-container") {
   imageRow.classList.add("row");
   imageCol.append(imageRow);
 
-  media.slice(0, 3).forEach((imageUrl, index) => {
+  media.slice(0, 3).forEach((imageUrl) => {
     const imageDiv = document.createElement("div");
     imageDiv.classList.add("col-md-6", "mb-3");
     imageRow.append(imageDiv);
@@ -58,7 +58,7 @@ export async function displaySingleListing(container = "#listing-container") {
     const img = document.createElement("img");
     img.classList.add("img-fluid", "rounded");
     img.src = imageUrl;
-    img.alt = `Image ${index + 1}`; // Set alt text for each image
+    img.alt = Image.description; // Set alt text for each image
     imageDiv.append(img);
   });
 
