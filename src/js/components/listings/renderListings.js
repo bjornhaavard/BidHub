@@ -4,6 +4,7 @@ import { parseDate } from "../../api/helpers/parse.js";
 // import { displayProfileData } from "../profile/profilePage.js";
 import { renderAdminButtons } from "./renderAdminButtons.js";
 import { getProfileCredits } from "../../api/helpers/getName.js";
+import { defaultImage } from "../../components//images/index.js";
 
 export function renderListings(listings) {
   const loggedInUsername = getName();
@@ -36,7 +37,12 @@ export function renderListings(listings) {
 
     const img = document.createElement("img");
     img.classList.add("card-img-top");
-    img.src = media;
+    if (media.length > 0) {
+      img.src = media[0];
+    } else {
+      img.src = `${defaultImage}`;
+    }
+
     divCard.append(img);
 
     const divCardBody = document.createElement("div");
