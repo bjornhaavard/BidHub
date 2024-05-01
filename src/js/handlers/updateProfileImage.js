@@ -26,7 +26,7 @@ export function updateProfile() {
         console.log(error);
       }
 
-      window.location.href = "../../profile/";
+      location.href = "../../profile/";
     });
   }
 }
