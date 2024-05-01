@@ -262,7 +262,6 @@ export async function displaySingleListing(container = "#listing-container") {
       showCredits.classList.add("card-text", "navbar-dark", "justify-self-end");
       showCredits.textContent = `Credits: ${profileCredits}`;
       navbar.append(showCredits);
-      console.log(profileCredits);
     }
   }
   //   container.append(allBids);

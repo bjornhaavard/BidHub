@@ -24,6 +24,7 @@ export function navLogOut() {
       storage.remove("token");
       storage.remove("profile");
       window.location.href = "../../../";
+      window.location.reload();
     }
   });
 }
