@@ -4,7 +4,7 @@ import { parseDate } from "../../api/helpers/parse.js";
 // import { displayProfileData } from "../profile/profilePage.js";
 import { renderAdminButtons } from "./renderAdminButtons.js";
 import { getProfileCredits } from "../../api/helpers/getName.js";
-import { defaultImage } from "../../components//images/index.js";
+import { defaultImage, errorImage } from "../../components//images/index.js";
 
 export function renderListings(listings) {
   const loggedInUsername = getName();
@@ -43,6 +43,12 @@ export function renderListings(listings) {
       img.src = `${defaultImage}`;
     }
 
+    // If theres is an error in the image url handle this here;
+
+    img.onerror = function () {
+      this.src = errorImage;
+    };
+
     divCard.append(img);
 
     const divCardBody = document.createElement("div");
@@ -72,7 +78,7 @@ export function renderListings(listings) {
     divCardBody.append(bid);
 
     const link = document.createElement("a");
-    link.href = `/BidHub/auctions/?id=${id}`;
+    link.href = `../../../../auctions/?id=${id}`;
     link.classList.add("btn", "btn-primary", "btn-outline-light");
     link.textContent = "View";
 

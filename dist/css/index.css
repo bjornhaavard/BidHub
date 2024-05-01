@@ -11896,17 +11896,6 @@ a {
   max-height: 251px;
 }
 
-.card {
-  display: flex; /* Enable flexbox for card */
-  flex-direction: column; /* Arrange content vertically */
-  min-height: 130px; /* Set minimum card height (adjust as needed) */
-}
-
-.card-img-top {
-  height: 350px;
-  object-fit: cover; /* Crop image to fit container */
-}
-
 .navbar {
   background-color: #001f3f;
 }
@@ -11917,6 +11906,10 @@ a {
 .nav-link:hover {
   color: #b8c9a8;
   border-radius: 3px;
+}
+
+.nav-dark-bg {
+  background-color: #001f3f;
 }
 
 .nav-link.active,
@@ -11938,6 +11931,13 @@ a {
 
 .navbar-toggler {
   margin-bottom: 8px;
+}
+
+.logout {
+  color: #d45953;
+}
+.logout:hover {
+  color: #b8c9a8;
 }
 
 /*# sourceMappingURL=index.css.map */

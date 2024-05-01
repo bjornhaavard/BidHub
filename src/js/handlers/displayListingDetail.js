@@ -6,6 +6,7 @@ import { bid } from "../api/listings/bid.js";
 import { getToken } from "../api/helpers/getToken.js";
 import { defaultAvatarImage } from "../api/constants.js";
 import { getProfileCredits } from "../api/helpers/getName.js";
+import { errorImage } from "../components/images/index.js";
 
 export async function displaySingleListing(container = "#listing-container") {
   const parentElement = document.querySelector(container);
@@ -58,7 +59,13 @@ export async function displaySingleListing(container = "#listing-container") {
     const img = document.createElement("img");
     img.classList.add("img-fluid", "rounded");
     img.src = imageUrl;
-    img.alt = Image.description; // Set alt text for each image
+
+    // If theres is an error in the image url handle this here;
+
+    img.onerror = function () {
+      this.src = errorImage;
+    };
+
     imageDiv.append(img);
   });
 
