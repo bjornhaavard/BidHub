@@ -9,7 +9,7 @@ export function logOut() {
     if (shouldLogout) {
       storage.remove("token");
       storage.remove("profile");
-      window.location.href = "/";
+      window.location.href = "../";
     }
   });
 }
@@ -23,7 +23,7 @@ export function navLogOut() {
     if (shouldLogout) {
       storage.remove("token");
       storage.remove("profile");
-      window.location.href = "/";
+      window.location.href = "./";
     }
   });
 }
