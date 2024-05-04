@@ -10,7 +10,7 @@ export async function bid(id, amount) {
     method,
     body: JSON.stringify(amount),
   });
-  console.log(response);
+
   const result = await response.json();
 
   if (response.ok) {

@@ -1,7 +1,6 @@
 import { getName } from "../../api/helpers/getName.js";
 import { getToken } from "../../api/helpers/getToken.js";
 import { parseDate } from "../../api/helpers/parse.js";
-// import { displayProfileData } from "../profile/profilePage.js";
 import { renderAdminButtons } from "./renderAdminButtons.js";
 import { getProfileCredits } from "../../api/helpers/getName.js";
 import { defaultImage, errorImage } from "../../components//images/index.js";
@@ -22,7 +21,6 @@ export function renderListings(listings) {
       seller: { name },
     } = listing;
 
-    // console.log(listing);
     const divContainer = document.createElement("div");
     divContainer.classList.add("col", "col-md-6", "col-lg-4");
     listingContainer.append(divContainer);

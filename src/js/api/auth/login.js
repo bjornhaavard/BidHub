@@ -7,7 +7,7 @@ export async function login(profile) {
   const loginURL = API_HOST_URL + API_BASE + action;
 
   const body = JSON.stringify(profile);
-    console.log(profile);
+
   const response = await fetch(loginURL, {
     headers: {
       "Content-Type": "application/json",

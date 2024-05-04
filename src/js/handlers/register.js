@@ -11,8 +11,6 @@ export function setRegisterFormListener() {
     const formData = new FormData(form);
     const profile = Object.fromEntries(formData.entries());
 
-    console.log(profile);
-
     try {
       await register(profile);
       displayMessage("#message", 'Registration successful. Please <a href="../login/">login</a>', "dark");

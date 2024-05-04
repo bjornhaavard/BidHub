@@ -9,6 +9,7 @@
  */
 
 import { updateUserImage } from "../api/auth/updateProfileAvatar.js";
+import { displayMessage } from "../components/shared/displayMessage.js";
 
 export function updateProfile() {
   const updateForm = document.querySelector("form#updateProfileForm");
@@ -23,7 +24,7 @@ export function updateProfile() {
       try {
         await updateUserImage(avatarUrl);
       } catch (error) {
-        console.log(error);
+        displayMessage("#message", error, "danger");
       }
 
       location.href = "../../profile/";

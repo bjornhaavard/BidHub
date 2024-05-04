@@ -19,7 +19,7 @@ export async function getDetails(id) {
   const getSingleListingUrl = `${API_HOST_URL}${API_BASE}${API_LISTINGS}/${id}?&_seller=true&_bids=true&_active=true`;
 
   const response = await fetchWithToken(getSingleListingUrl);
-  console.log(response);
+
   if (response.ok) {
     return await response.json();
   }

@@ -14,7 +14,6 @@ export async function displayListings() {
     // renderAdminButtons();
     renderListings(listings, "#listings-container");
   } catch (error) {
-    console.log(error);
     displayMessage("#error-message", error, "danger");
   }
 }

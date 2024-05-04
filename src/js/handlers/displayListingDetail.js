@@ -20,7 +20,7 @@ export async function displaySingleListing(container = "#listing-container") {
   }
 
   const listing = await getDetails(id);
-  console.log(listing);
+
   if (listing) {
     placeHolder.style.display = "none";
   }
@@ -32,7 +32,6 @@ export async function displaySingleListing(container = "#listing-container") {
     bids,
     seller: { avatar, name },
   } = listing;
-  console.log(listing);
 
   const row = document.createElement("div");
   row.classList.add("container", "mt-5");
@@ -59,7 +58,10 @@ export async function displaySingleListing(container = "#listing-container") {
     const img = document.createElement("img");
     img.classList.add("img-fluid", "rounded");
 
-    img.src = imageUrl || defaultImage;
+    if (imageUrl === null) {
+      img.src = defaultImage;
+    }
+    img.src = imageUrl;
 
     // If theres is an error in the image url handle this here;
 

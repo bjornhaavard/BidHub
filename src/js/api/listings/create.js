@@ -10,7 +10,7 @@ export async function createListing(listData) {
     method,
     body: JSON.stringify(listData),
   });
-  console.log(response);
+
   const result = await response.json();
 
   if (response.ok) {

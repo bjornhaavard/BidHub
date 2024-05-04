@@ -17,7 +17,7 @@ const action = "/profiles";
 export async function getProfile() {
   const profile = getName();
 
-  const response = await fetchWithToken(`${API_PROFILE}${action}/${profile}`);
+  const response = await fetchWithToken(`${API_PROFILE}${action}/${profile}?&_listings=true&_bids=true&_active=true&_description=true`);
 
   if (response.ok) {
     return await response.json();

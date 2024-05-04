@@ -1,5 +1,5 @@
 // Define the router function
-// import { renderAdminButtons } from "./components/listings/renderAdminButtons.js";
+
 import * as handlers from "./handlers/index.js";
 import { displayListings } from "./handlers/displayListing.js";
 import { searchListingsHandler } from "./handlers/searchListings.js";
@@ -8,11 +8,10 @@ import { hidelinks, hideLogin, hideLogout } from "./api/helpers/hideLink.js";
 import { updateProfile } from "./handlers/updateProfileImage.js";
 import { sortListingsHandler } from "./handlers/sortListings.js";
 import { navLogOut } from "./handlers/logOut.js";
-// import { renderUserCredits } from "./handlers/renderMenu.js";
 
 function router() {
   const path = window.location.pathname;
-  console.log(path);
+
   switch (path) {
     case "/":
     case "/index.html":

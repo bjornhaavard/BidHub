@@ -7,7 +7,6 @@ export const API_AUCTION = "/auction";
 export const API_PROFILE_IMG = `${API_HOST_URL}${API_BASE}/auction/profiles/`;
 export const API_PROFILE = `${API_HOST_URL}${API_BASE}${API_AUCTION}`;
 export const API_CREATE_LISTING = `${API_HOST_URL}${API_BASE}${API_LISTINGS}`;
-// export const baseUrl = "bjornhaavard.github.io/BidHub/" || "http://localhost:5500";
 
 // images
 

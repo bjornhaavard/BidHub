@@ -19,10 +19,9 @@ export async function searchListingsHandler() {
       const listings = await searchListings(searchQuery);
 
       renderListings(listings, "#listings-container");
-      console.log();
+
       displayMessage("#filter-message", `Showing  ${listings.length} listings from search:  <span style="font-style: italic; text-decoration: underline;">${searchInput.value}</span>`, "success");
     } catch (error) {
-      console.log(error);
       displayMessage("#listings-container", `Something went wrong: ${error}`, "danger");
     }
   });
