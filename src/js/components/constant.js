@@ -1,1 +1,1 @@
-export const API_PROFILE_LISTINGS = "../../../../auctions/?id=";
+export const API_PROFILE_LISTINGS = "/../auctions/?id=";
