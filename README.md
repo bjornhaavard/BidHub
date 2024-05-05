@@ -1,7 +1,8 @@
 # BidHub
 An auction site where you can bid on different items in a 8bit environment.
 
-![image](![image]https://github.com/bjornhaavard/BidHub/assets/94046432/d742c45b-7deb-4007-83b4-2a7b426c9cbb)
+
+![BidHub_screenshot](https://github.com/bjornhaavard/BidHub/assets/94046432/06c8c20f-3f91-43ca-8a53-3c55a972632d)
 
 [BidHub](https://bjornhaavard.github.io/BidHub/)
 
