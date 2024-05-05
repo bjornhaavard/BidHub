@@ -202,7 +202,7 @@ export async function displaySingleListing(container = "#listing-container") {
         window.location.reload(); // Or redirect to a specific page
       } catch (error) {
         displayMessage("#message", error.message, "danger");
-        console.log(error);
+
         if (!token) {
           displayMessage("#message", "Please log in to place a bid", "danger");
         }
