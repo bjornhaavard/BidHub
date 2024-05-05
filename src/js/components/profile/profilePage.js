@@ -63,21 +63,22 @@ export async function displayProfileData(profileData) {
           cardTitle.classList.add("card-title");
           cardTitle.textContent = listing.title;
 
-          // Create "Ends at" badge
+          // Create "Ends" badge
           const endsAtBadge = document.createElement("span");
           endsAtBadge.classList.add("badge", "bg-warning", "text-dark");
           const shortenedDate = shortenDateFormat(listing.endsAt);
-          endsAtBadge.textContent = `Ends at: ${shortenedDate}`;
+          endsAtBadge.textContent = `Ends: ${shortenedDate}`;
 
           // Create view listing button
           const viewButton = document.createElement("a");
           viewButton.classList.add("btn", "btn-primary", "btn-sm", "mt-2", "btn-outline-light");
           viewButton.textContent = "View Listing";
 
-          // Assuming you have a function to handle listing details access (replace with your logic)
+          //   Handle listing view button click
+
           viewButton.addEventListener("click", () => {
             viewButton.href = `${API_PROFILE_LISTINGS}${listing.id}`;
-            displaySingleListing(listing.id); // Replace with your implementation
+            displaySingleListing(listing.id);
           });
 
           // Append elements to card body
