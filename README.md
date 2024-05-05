@@ -7,7 +7,7 @@ An auction site where you can bid on different items in a 8bit environment.
 
 ## Description
 
-This is a auction site called BidHub for the semster project 2 delivery
+This is a auction site called BidHub, Here you can check out different items that you can purchase using a mock credit system. 
 
 My GitHub project: https://github.com/users/bjornhaavard/projects/1
 
